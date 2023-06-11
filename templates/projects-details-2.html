@@ -1,0 +1,89 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+         <!--Header Start-->
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+       
+            
+         <!--Header End--> 
+         <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <h1>Bioxilmaxillikni saqlash laboratoriyasi</h1>
+               <ul>
+                <li><a href="#">Bosh Sahifa</a></li>
+                <li><a href="{% url 'project-detail'%}">Faoliyat</a></li>
+                <li><a href="#">Bioxilmaxillikni saqlash laboratoriyasi</a></li>
+             </ul>
+            </div>
+         </section>
+         <!--Inner Header End--> 
+         <!--Blog Start-->
+         <section class="wf100 p80 blog">
+            <div class="blog-details">
+               <div class="container ">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12">
+                        <!--Blog Single Content Start-->
+                        <div class="flex-qilish">
+                           <div  class="blog-single-content" style="width: 100%;height: 100%;">
+                           <div  class="blog-single-thumb"><img src="{% static 'images/project-bioxill.jpg' %}" alt=""></div>
+                           <h3>Bioxilmaxillikni saqlash laboratoriyasi</h3>
+                           <p>- biologik xilmaxillikning joriy holatini, hozirgi kunda noyob va yo‘q bo‘lib ketish arafasida turgan o‘simlik va hayvon turlarining tabiatga hamda tabiiy bioxilmaxillikning buzilishiga ta’sirini tahlil qilish masalalari bo‘yicha chuqur fundamental va amaliy tadqiqotlarni o‘tkazish;<br>
+
+                            - noyob o‘simlik va hayvon turlarini yo‘q bo‘lib ketishini oldini olishni ta’minlovchi mutlaqo yangi va samarali uslub va texnologiyalarni ishlab chiqish;<br>
+                            
+                            - noyob o‘simlik va hayvon turlarini yo‘q bo‘lib ketishini oldini olishni ta’minlovchi ilg‘or xorijiy texnologiyalar va innovatsiyalarni moslashtirish va amaliyotga tatbiq etish;<br>
+                            
+                            -biologik xilmaxillikni saqlash masalalari bo‘yicha talab va standartlarni ishlab chiqishda ishtirok etish;<br>
+                            
+                            - tabiiy bioxilmaxillikni saqlash sohasida xorijiy ilmiy-tadqiqot muassasalari va markazlari bilan hamkorlikni rivojlantirishda, ilmiy konferensiyalarda, seminarlarda, qo‘shma tadqiqotlarda, loyihalarda, xodimlarning malakasini oshirish va ularni o‘qitishni tashkil etishda ishtirok etish;
+                            
+                            - xalqaro standartlar darajasida yuqori malakali kadrlar tayyorlash, ekologiya va atrof-muhitni muhofaza qilish sohasidagi oliy o‘quv muassasalari o‘qituvchilari hamda mutaxassislarini qayta tayyorlash va ularning malakasini oshirishda ishtirok etish.</p>
+                                           </div>
+                           <div style="display: flex;">
+                        <div class="side-widget project-list-widget">
+                           <h5>Hozirgi Faoliyatlar</h5>
+                           <ul>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-9' %}">Yashil o‘sish va iqlim o‘zgarishi bo‘limi</a></li>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-10' %}">Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</a></li>
+                              <li><i class="fa-solid fa-leaf"style="font-size: 12px;"></i><a href="{% url 'project-detail-7' %}">Ekologik ta’lim va targ‘ibot bo‘limi</a></li>
+                              <li><i class="fa-solid fa-book-bookmark"style="font-size: 12px;"></i><a href="{% url 'project-detail-4' %}">Ilmiy ishlanmalarni tijoratlantirish va patentlash bo‘limi</a></li>
+                              <li><i class="fa-solid fa-computer" style="font-size: 12px;"></i><a href="{% url 'project-detail-1' %}">AKT va axborot resurslari bo‘limi</a></li>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail' %}">“Atmosfera havosini muhofaza qilish” laboratoriyasi </a></li>
+                              <li><i class="fa-solid fa-flask"  style="font-size: 12px;"></i><a href="{% url 'project-detail-2' %}">Bioxilmaxillikni saqlash laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-earth-americas" style="font-size: 12px;"></i><a href="{% url 'project-detail-3' %}">Yer resurslarini muhofaza qilish laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-recycle"style="font-size: 12px;"></i><a href="{% url 'project-detail-6' %}">Chiqindilarni qayta ishlash va utilizatsiya qilish laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-hand-holding-droplet"style="font-size: 12px;"></i><a href="{% url 'project-detail-8' %}">“Suv resurslarini muhofaza qilish texnologiyalari” laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-flask"style="font-size: 12px;"></i><a href="{% url 'project-detail-5' %}">Ilmiy-tajriba stansiyasi</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+{% endblock content %}
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}
+
+
+
+

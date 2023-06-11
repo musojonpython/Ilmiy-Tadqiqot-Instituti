@@ -1,0 +1,124 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<!--Inner Header Start-->
+<section class="wf100 p100 inner-header">
+   <div class="container">
+      <h1>AKT va axborot resurslari bo‘limi</h1>
+      <ul>
+         <li><a href="#">Bosh Sahifa</a></li>
+         <li><a href="#">Faoliyat</a></li>
+         <li><a href="#">AKT va axborot resurslari bo‘limi</a></li>
+      </ul>
+   </div>
+</section>
+<!--Inner Header End-->
+<!--Blog Start-->
+<section class="wf100 p80 blog">
+   <div class="projects-grid">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% static 'images/labaratoriya.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">Atmosfera xavosini muxofaza labaratoriyasi</a> </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% static 'images/serimg2.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">AKT va axborot resurslari bo‘limi</a>
+                     </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% static 'images/serimg3.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">Bioxilmaxillikni saqlash laboratoriyasi</a>
+                     </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% static 'images/serimg4.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">Yer resurslarini muhofaza qilish laboratoriyasi</a>
+                     </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% staic 'images/serimg5.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">Ilmiy ishlanmalarni tijoratlantirish va patentlash bo‘limi</a>
+                     </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <!--campaign box start-->
+               <div class="ser-box">
+                  <div class="ser-thumb">
+                     <a href="#"><i class="fas fa-link"></i></a>
+                     <img src="{% static 'images/serimg5.jpg' %}" alt="">
+                  </div>
+                  <div class="ser-txt">
+                     <h5> <a href="#">Ilmiy-tajriba stansiyasi</a>
+                     </h5>
+                     <span class="aicon"><i class="fas fa-arrow-right"></i></span>
+                  </div>
+               </div>
+               <!--campaign box end-->
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endblock content %}
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}

@@ -1,0 +1,91 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+         <!--Header End--> 
+         <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <h1>Ilmiy-tajriba stansiyasi</h1>
+               <ul>
+                <li><a href="#">Bosh Sahifa</a></li>
+               
+                <li><a href="{% url 'project-detail'%}">Faoliyat</a></li>
+                <li><a href="#">Ilmiy-tajriba stansiyasi</a></li>
+             </ul>  
+            </div>
+         </section>
+         <!--Inner Header End--> 
+         <!--Blog Start-->
+         <section class="wf100 p80 blog">
+            <div class="blog-details">
+               <div class="container ">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12">
+                        <!--Blog Single Content Start-->
+                        <div class="flex-qilish">
+                        <div  class="blog-single-content" style="width: 100%;height: 100%;">
+                           <div  class="blog-single-thumb"><img src="{% static 'images/project-stansiya.jpg' %}" alt=""></div>
+                           <h3>Ilmiy-tajriba stansiyasi</h3>
+                           <p>- Atrof muhitning joriy holatini o‘rganish, ifloslantiruvchi moddalarning bioxilma-xillikka, jumladan, noyob, yo‘q bo‘lib ketish arafasida turgan o‘simlik hamda hayvon turlariga ta’sirini o‘rganish;
+                            <br>
+                            - yer resurslarini muhofaza qilish bo‘yicha ilmiy tadqiqotlar olib borish, yerlar degradatsiyasiga qarshi kurashish va uning oldini oluvchi texnologiyalar bo‘yicha ilmiy asoslangan takliflar ishlab chiqish;
+                            <br>
+                            - yer osti va yer usti suvlari ifloslanishining oldini olish, oqova suvlarni tozalash va qayta ishlash bo‘yicha samarali usul hamda texnologiyalarni ishlab chiqish bo‘yicha fundamental va amaliy tadqiqotlar o‘tkazish;
+                            <br>
+                            - atmosfera havosining joriy holati, undagi ifloslantiruvchi moddalarning atrof muhit va tabiatga ta’siri masalalari bo‘yicha chuqur fundamental va amaliy tadqiqotlar olib borish, atmosfera havosining ifloslanishini kamaytirishni ta’minlovchi yangi, samarali uslub va texnologiyalarni ishlab chiqish;
+                            <br>
+                            - maishiy va turli chiqindilarni qayta ishlash va utilizatsiya qilishni ta’minlovchi samarali uslub hamda texnologiyalarni ishlab chiqish bo‘yicha amaliy tadqiqotlar olib borish;
+                            <br>
+                            - «yashil» texnologiyalarga o‘tishni jadallashtirish va resurs tejamkor texnologiyalarni keng joriy etish orqali «yashil» iqtisodiyotni rivojlantirishga qaratilgan fundamental, amaliy va innovatsion tadqiqotlar o‘tkazish;
+                            <br>
+                            - global iqlim o‘zgarishining ekologiya va atrof muhitga salbiy ta’sirini kamaytirish bo‘yicha ilmiy asoslangan takliflar ishlab chiqish;
+                            <br>
+                            - ekologiya va atrof muhitni muhofaza qilish sohasida ekotizim xizmatlarini amalga oshirish orqali atrof muhitni muhofaza qilish va tegishli normativ hujjatlarni ishlab chiqish;
+                            <br>
+                            - ekologiya va atrof muhitni muhofaza qilish sohasi uchun malakali ilmiy kadrlarni tayyorlash, ta’lim, ilm-fan va ishlab chiqarish o‘rtasida hamkorlikni rivojlantirish, xorijiy ta’lim va ilmiy-tadqiqot muassasalari hamda xalqaro tashkilotlar bilan aloqalar o‘rnatish va grantlar asosida ilmiy tadqiqotlar olib borish;
+                            <br>
+                            - zamonaviy ilmiy-laboratoriya bazasini shakllantirish, uni ilg‘or texnologik asbob-uskunalar bilan jihozlash hamda sohani rivojlantirishga qaratilgan ilmiy-innovatsion tadqiqotlarni kengaytirish va ularning integratsiyasi bo‘yicha samarali tizimni shakllantirishda ishtirok etish.</p>
+                        </div>
+                            <div style="display: flex;">
+                                <div class="side-widget project-list-widget">
+                                   <h5>Hozirgi Faoliyatlar</h5>
+                                   <ul>
+                                      <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-9' %}">Yashil o‘sish va iqlim o‘zgarishi bo‘limi</a></li>
+                                      <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-10' %}">Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</a></li>
+                                      <li><i class="fa-solid fa-leaf"style="font-size: 12px;"></i><a href="{% url 'project-detail-7' %}">Ekologik ta’lim va targ‘ibot bo‘limi</a></li>
+                                      <li><i class="fa-solid fa-book-bookmark"style="font-size: 12px;"></i><a href="{% url 'project-detail-4' %}">Ilmiy ishlanmalarni tijoratlantirish va patentlash bo‘limi</a></li>
+                                      <li><i class="fa-solid fa-computer" style="font-size: 12px;"></i><a href="{% url 'project-detail-1' %}">AKT va axborot resurslari bo‘limi</a></li>
+                                      <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail' %}">“Atmosfera havosini muhofaza qilish” laboratoriyasi </a></li>
+                                      <li><i class="fa-solid fa-flask"  style="font-size: 12px;"></i><a href="{% url 'project-detail-2' %}">Bioxilmaxillikni saqlash laboratoriyasi</a></li>
+                                      <li><i class="fa-solid fa-earth-americas" style="font-size: 12px;"></i><a href="{% url 'project-detail-3' %}">Yer resurslarini muhofaza qilish laboratoriyasi</a></li>
+                                      <li><i class="fa-solid fa-recycle"style="font-size: 12px;"></i><a href="{% url 'project-detail-6' %}">Chiqindilarni qayta ishlash va utilizatsiya qilish laboratoriyasi</a></li>
+                                      <li><i class="fa-solid fa-hand-holding-droplet"style="font-size: 12px;"></i><a href="{% url 'project-detail-8' %}">“Suv resurslarini muhofaza qilish texnologiyalari” laboratoriyasi</a></li>
+                                      <li><i class="fa-solid fa-flask"style="font-size: 12px;"></i><a href="{% url 'project-detail-5' %}">Ilmiy-tajriba stansiyasi</a></li>
+                                   </ul>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--Footer Start-->
+      {% endblock content %}
+      {%block footer %}
+         {% for footerNew in footerNews%}
+            <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+               <strong>
+                  <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+               </strong>
+               <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+            </li>
+      {% endfor %}
+   {%endblock footer%}

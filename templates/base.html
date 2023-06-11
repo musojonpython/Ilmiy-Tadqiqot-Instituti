@@ -1,0 +1,150 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static '/images/website-logo.png' %}">
+      <title>ECO ILM</title>
+      <!-- CSS FILES START -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/owl.carousel.min.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/prettyPhoto.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/all.min.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}" >
+   </head>
+   <body>
+      <!--Header Start-->
+         <header class="header-style-2">
+            <nav class="navbar navbar-expand-lg">
+               <a class="navbar-brand" href="{% url 'home-page' %}"><img class="logo-still" src="{% static 'images/website-logo.png' %}" alt=""></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home-page'%}">Institut</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'aboutPages'%}">Batafsil</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news-pages' %}">Yangiliklar</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'first-projects' %}">Loyihalar</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'project-detail' %}">Faoliyat</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'connect-pages' %}">Bog'lanish</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home-page' %}">Ilmiy Jurnal</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'openBudget-pages'%]">Ochiq Ma'lumotlar</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+      <!--Header End-->
+   {% block content%}
+   {% endblock content%}
+    <!--Footer Start-->
+      <footer class="footer" style="background-color: black;">
+         <div class="footer-top wf100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                        <h4>Biz Haqimizda</h4>
+                        <p> Institut O‘zbekiston Respublikasi Fan va texnologiyalarni rivojlantirishni muvofiqlashtirish qo‘mitasi (keyingi o‘rinlarda O‘zbekiston Respublikasi Fan va texnologiyalar agentligi) bilan tuzilgan shartnomalar bo‘yicha davlat ilmiy-texnik dasturlarini amalga oshirishda ishtirok etdi. </p>
+                        <a href="{% url 'aboutPages' %}" class="lm">Biz haqimizda qo'shimcha</a>
+                     </div>
+                     <!--Footer Widget End-->
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                        <h4>Bizning Maqsadlar</h4>
+                        <ul class="quick-links">
+                           <li><a href="#">Chuqur fundamental va amaliy tadqiqotlarni o‘tkazish</a></li>
+                           <li><a href="#">Chiqindilarni Kamaytirish</a></li>
+                           <li><a href="#">EKO g'oyalar topish</a></li>
+                           <li><a href="#">Qayta Ishlashni Oshirish</a></li>
+                           <li><a href="#">O'simliklar Sonini Ko'paytirish</a></li>
+                           <li><a href="#">Yovvoyi Tabiatni Saqlab Qolishni Orttirish</a></li>
+                        </ul>
+                     </div>
+                     <!--Footer Widget End-->
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                        <h4>So'nggi Yangiliklar</h4>
+                        <ul class="lastest-products">
+                           {% block footer%}
+                           {% endblock footer%}
+                        </ul>
+                     </div>
+                     <!--Footer Widget End-->
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                           <!--Footer Product End-->
+                           <div class="joy">
+                           <a href="https://www.instagram.com/uzecoit" target="_blank"> <i class="fa-brands fa-instagram ikonkachalar"></i></a>
+                           <a href="https://www.facebook.com/uzecoit"> <i class="fa-brands fa-facebook ikonkachalar"></i></a>
+                           <a href="https://t.me/Ecoilm"><i class="fa-brands fa-telegram ikonkachalar"></i></a>
+                           <a href="https://youtube.com/@uzecoit"><i class="fa-brands fa-youtube ikonkachalar"></i></a>
+                           </div>
+                           <div className="map-code">
+                              <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.6486414220926!2d69.2254687!3d41.2947508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b62ad6c0735%3A0x2260c74fb009b861!2z0I7Qt9Cx0LXQutC40YHRgtC-0L0g0KDQtdGB0L_Rg9Cx0LvQuNC60LDRgdC4INCt0LrQvtC70L7Qs9C40Y8g0LLQsCDQsNGC0YDQvtGEINC80YPSs9C40YLQvdC4INC80YPSs9C-0YTQsNC30LAg0pvQuNC70LjRiCDQtNCw0LLQu9Cw0YIg0pvRntC80LjRgtCw0YHQuA!5e0!3m2!1sen!2s!4v1682565479652!5m2!1sen!2s"
+                                   title="This is a unique title"   width="100%" height="100%" allowFullScreen loading="lazy">
+                              </iframe>
+                           </div>
+                     <!--Footer Widget End-->
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="footer-copyr wf100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 col-sm-4"> <img src="{% static 'images/iFraganus-IT-team-logo.jpg' %}" alt="iFragnus-team-logo"> </div>
+                  <div class="col-md-8 col-sm-8">
+                     <p> All Rights Reserved of iFragnus Team, Design & Developed By: iFragnus Team  </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </footer>
+      <!--Footer End-->
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script src="{% static 'bootstrap/js/jquery-3.3.1.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/jquery-migrate-1.4.1.min.js'%}"></script>
+      <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'bootstrap/js/jquery.prettyPhoto.js' %}"></script>
+      <script src="{% static 'bootstrap/js/isotope.min.js' %}"></script>
+   </body>
+</html>

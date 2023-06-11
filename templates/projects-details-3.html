@@ -1,0 +1,111 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+       
+            
+         <!--Header End--> 
+         <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <h1>Yer resurslarini muhofaza qilish laboratoriyasi</h1>
+               <ul>
+                  <li><a href="#">Bosh Sahifa</a></li>
+                 
+                  <li><a href="{% url 'project-detail'%}">Faoliyat</a></li>
+                  <li><a href="#">Yer resurslarini muhofaza qilish laboratoriyasi</a></li>
+               </ul>
+            </div>
+         </section>
+         <!--Inner Header End--> 
+         <!--Blog Start-->
+         <section class="wf100 p80 blog">
+            <div class="blog-details">
+               <div class="container ">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12">
+                        <!--Blog Single Content Start-->
+                        <div class="flex-qilish">
+                           <div  class="blog-single-content" style="width: 100%;height: 100%;">
+                              <div  class="blog-single-thumb"><img src="{% static 'images/project-resurs.jpg' %}" alt=""></div>
+                              <h3>Yer resurslarini muhofaza qilish laboratoriyasi</h3>
+
+                              <p>- yer resurslarini muhofaza qilishga qaratilgan ilmiy tadqiqotlar olib borish, yerlardagi degradatsiya jarayoniga qarshi kurashish va uning oldini olish bo‘yicha ilmiy asoslangan takliflar ishlab chiqish;
+                               <br>
+                               - yer resurslarini muhofaza qilishda tuproqlarning ifloslanishi, degradatsiyalanishi, eroziyalanishi, cho‘llanish, sho‘rlanish kabi mezonlarning darajasini baholash;
+                               <br>
+                               - yer resurslarini muhofaza qilishda tuproq unumdorligini saqlash, tuproqlarning fizik, kimyoviy, agrokimyoviy va boshqa xossalari bo‘yicha ekologik-meliorativ holatini yaxshilashga qaratilgan chora-tadbirlar ishlab chiqish;
+                               <br>
+                               - yerlarni suv va shamol eroziyasidan, qayta sho‘rlanishdan, sahrolanishdan, ishlab chiqarish chiqindilari bilan kimyoviy ifloslanishidan muhofaza qilish ham degradatsiyalanishni oldini olishga texnologiyalarini ishlab chiqish;
+                               <br>
+                               - yer resurslari muhofazasida sho‘rtoblanishga duchor yerlarda sho‘rtoblangan tuproqlarning singdirish kompleksidagi natriy kationini tabiiy meliorantlar orqali siqib chiqarish texnologiyasini ishlab chiqish hamda tuproq unumdorligini saqlash va muhofaza qilishga ilmiy asoslangan tavsiyalar berish;
+                               <br>
+                               - yer resurslarini muhofaza qilishda degradatsiyaga uchragan yerlarni rekultivatsiya qilish, qaytadan ekin maydonlari oborotiga kiritish, tuproq unumdorligini saqlash va muhofaza qilish bo‘yicha yo‘riqnoma va tavsiyalar ishlab chiqish;
+                               <br>
+                               - ilmiy-tadqiqot ishlarini olib boruvchi xodimlarni va doktorantlarning ilmiy ishlanmalarini Innovatsion rivojlantirish vazirligi tomonidan e’lon qilinadigan loyihalarga jalb qilish;
+                               <br>
+                               - intellektual mulk obyektlariga mavjud mualliflarning monografiyalarini, maqolasini, patentini amalga oshirishda shartnomalarni tuzish ustida ishlar olib borish;
+                               <br>
+                               - laboratoriyada yaratilgan ishlanmalar va ilmiy tadqiqot faoliyatni mukammallashtirish sohasida axborot resurslaridagi ma’lumotlarni o‘rganish, to‘plash asosida yangi loyihalarni yaratish;
+                               <br>
+                               - laboratoriya ilmiy-tadqiqot xodimlari tomonidan raqobatbardosh ilmiy-tadqiqot ishlanmalarini ishlab chiqishda, targ‘ibot qilishda monografiya, maqola va tezis shaklida intellektual faoliyat natijalarini amalda qo‘llash maqsadida respublika va horijiy davlatlarda maqolalarni e’lon qilish bilan bog‘liq bo‘lgan hollarda qo‘llab-quvvatlashni ta’minlash;
+                               <br>
+                               - laboratoriya o‘z faoliyat yo‘nalishi bo‘yicha normativ, metodik va patent hujjatlari bo‘yicha ishini muvofiqlashtirish;
+                               <br>
+                               - shartnomalarni tuzishda amaldagi qonunchilik talablariga qat’iy rioya qilish;
+                               <br>
+                               - tuzilgan shartnomalarni bajarish uchun qonun hujjatlarida nazarda tutilgan harakatlarni amalga oshirish;
+                               <br>
+                               - Institut rahbariyat rezolyutsiyasi bilan laboratoriyaga kelib tushgan barcha xujjatlarni belgilangan muddatda ijrosini ta’minlash;
+                               <br>
+                               - Institut rahbariyatining qonun hujjatlariga muvofiq alohida boshqa topshiriqlarini bajarish;
+                               <br>
+                               - laboratoriya, shuningdek, qonunchilikda taqiqlanmagan boshqa faoliyatlarni amalga oshirish;</p>
+                                              </div>
+                              <div style="display: flex;">
+                        <div class="side-widget project-list-widget">
+                           <h5>Hozirgi Faoliyatlar</h5>
+                           <ul>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-9' %}">Yashil o‘sish va iqlim o‘zgarishi bo‘limi</a></li>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-10' %}">Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</a></li>
+                              <li><i class="fa-solid fa-leaf"style="font-size: 12px;"></i><a href="{% url 'project-detail-7' %}">Ekologik ta’lim va targ‘ibot bo‘limi</a></li>
+                              <li><i class="fa-solid fa-book-bookmark"style="font-size: 12px;"></i><a href="{% url 'project-detail-4' %}">Ilmiy ishlanmalarni tijoratlantirish va patentlash bo‘limi</a></li>
+                              <li><i class="fa-solid fa-computer" style="font-size: 12px;"></i><a href="{% url 'project-detail-1' %}">AKT va axborot resurslari bo‘limi</a></li>
+                              <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail' %}">“Atmosfera havosini muhofaza qilish” laboratoriyasi </a></li>
+                              <li><i class="fa-solid fa-flask"  style="font-size: 12px;"></i><a href="{% url 'project-detail-2' %}">Bioxilmaxillikni saqlash laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-earth-americas" style="font-size: 12px;"></i><a href="{% url 'project-detail-3' %}">Yer resurslarini muhofaza qilish laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-recycle"style="font-size: 12px;"></i><a href="{% url 'project-detail-6' %}">Chiqindilarni qayta ishlash va utilizatsiya qilish laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-hand-holding-droplet"style="font-size: 12px;"></i><a href="{% url 'project-detail-8' %}">“Suv resurslarini muhofaza qilish texnologiyalari” laboratoriyasi</a></li>
+                              <li><i class="fa-solid fa-flask"style="font-size: 12px;"></i><a href="{% url 'project-detail-5' %}">Ilmiy-tajriba stansiyasi</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+{% endblock content %}
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}
+
+
+
+
+         <!--Footer Start-->

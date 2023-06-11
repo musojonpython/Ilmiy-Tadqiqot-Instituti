@@ -1,0 +1,101 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+         <!--Header End--> 
+         <!--Inner Header Start-->
+         <section class="wf100 p100 inner-header">
+            <div class="container">
+               <h1>Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</h1>
+            <ul>
+                <li><a href="#">Bosh Sahifa</a></li>
+              
+                <li><a href="{% url 'project-detail'%}">Faoliyat</a></li>
+                <li><a href="#">Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</a></li>
+             </ul>
+            </div>
+         </section>
+         <!--Inner Header End--> 
+         <!--Blog Start-->
+         <section class="wf100 p80 blog">
+            <div class="blog-details">
+               <div class="container ">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12">
+                        <!--Blog Single Content Start-->
+                        <div class="flex-qilish">
+                        <div  class="blog-single-content" style="width: 100%;height: 100%;">
+                           <div  class="blog-single-thumb"><img src="{% static 'images/ekotizm-uchun.jpg' %]" alt=""></div>
+                           <h3>Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</h3>
+                           <p>
+                            - ekotizim xizmatlarini yo‘lga qo‘yish va normativ hujjatlarni ishlab chiqish bo‘yicha ilmiy-tadqiqot ishlari natijalarini amaliy tajribalar bilan muvofiqlashtirgan holda Institut bo‘limlari bilan hamkorlikda uslubiy qo‘llanmalar va metodologiyalar hamda tegishli normativ-huquqiy hujjatlar tayyorlash;
+                            <br>
+                            - respublikada ekologik holatni yaxshilash, ekologik xavfsizlikni ta’minlash maqsadida ilmiy-tadqiqot ishlari natijalarni amaliy tajribalar bilan muvofiqlashtirish orqali ekotizim xizmatlari bo‘yicha va sohaga oid normativ hujjatlar loyihalarini tayyorlash.
+                            <br>
+                            - ekotizim xizmatlarini amalga oshirishni xalqaro talablar darajasiga yetkazish choralarini ko‘rish;
+                            <br>
+                            - tizimga aloqador bo‘lgan va Institut zimmasiga yuklatilgan uzoq muddatli, o‘rta va qisqa muddatli ichki va davlat maqsadli dasturlari hamda davlatlararo maqsadli dasturlarni shakllantirishga ishtirok etish;
+                            <br>
+                            - tabiatni muhofaza qilish va ulardan oqilona foydalanish va ekotizim xizmatlari sohasiga oid qo‘llanma, metodolgiya hamda normativ-huquqiy hujjatlarni ishlab chiqishda ishtirok etish;
+                            <br>
+                            - tabiatni muhofaza qilish va ulardan oqilona foydalanish va ekotizim xizmatlari sohasidagi ma’lumotlar bazasini va axborotlashtirish tizimining uzluksizligini ta’minlash, shu jumladan, bu boradagi loyihalarni ishlab chiqilishida hamda amaliyotga tadbiq etilishida faol ishtirok etish;
+                            <br>
+                            - yuridik va jismoniy shaxslar, shu jumladan, hususiy tadbirkorlarning buyurtmasiga asosan tabiatni muhofaza qilish va ulardan oqilona foydalanish va ekotizim xizmatlari sohasidagi normativ loyihalarini ishlab chiqish/ ishlab chiqishda qatnashish;
+                            <br>
+                            - Institut bo‘limlar bilan xo‘jalik yurituvchi subyektlarning buyurtmalariga asosan shartnomalarga muvofiq tabiatni muhofaza qilishva ulardan oqilona foydalanish va ekotizim xizmatlari sohasidagi ilmiy-tadqiqot, monitoring qilishga oid texnologiyalarni ishlab chiqarish va xizmatlar (ishlar) ko‘rsatish faoliyatida qatnashish;
+                            <br>
+                            - respublika va xalqaro ilmiy konferensiyalarda, yarmarkalarda, innovatsion ko‘rgazmalarda ishtirok etish, orttirilgan ko‘nikmalarni amaliyotda, shuningdek, olib boriladigan ilmiy-tadqiqot, nomativ-hujjatlar ishlab chiqishda qo‘llash;
+                            <br>
+                            - shartnomalarni tuzishda amaldagi qonunchilik talablariga qat’iy rioya qilish;
+                            <br>
+                            - tuzilgan shartnomalarni bajarish uchun qonun hujjatlarida nazarda tutilgan harakatlarni amalga oshirish;
+                            <br>
+                            - institut rahbariyat rezolyutsiyasi bilan bo‘limga kelib tushgan barcha hujjatlarni belgilangan muddatda ijrosini ta’minlash;
+                            <br>
+                            - institut rahbariyatining qonun hujjatlariga muvofiq alohida boshqa topshiriqlarini bajarish;  </p>
+                                           </div>
+                       <div class="flex-qilish">
+                        <div style="display: flex;">
+                           <div class="side-widget project-list-widget">
+                              <h5>Hozirgi Faoliyatlar</h5>
+                              <ul>
+                                 <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-9' %}">Yashil o‘sish va iqlim o‘zgarishi bo‘limi</a></li>
+                                 <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail-10' %}">Ekotizim xizmatlari va normativ hujjatlarni ishlab chiqish bo‘limi</a></li>
+                                 <li><i class="fa-solid fa-leaf"style="font-size: 12px;"></i><a href="{% url 'project-detail-7' %}">Ekologik ta’lim va targ‘ibot bo‘limi</a></li>
+                                 <li><i class="fa-solid fa-book-bookmark"style="font-size: 12px;"></i><a href="{% url 'project-detail-4' %}">Ilmiy ishlanmalarni tijoratlantirish va patentlash bo‘limi</a></li>
+                                 <li><i class="fa-solid fa-computer" style="font-size: 12px;"></i><a href="{% url 'project-detail-1' %}">AKT va axborot resurslari bo‘limi</a></li>
+                                 <li><i class="fa-solid fa-flask-vial" style="font-size: 12px;"></i><a href="{% url 'project-detail' %}">“Atmosfera havosini muhofaza qilish” laboratoriyasi </a></li>
+                                 <li><i class="fa-solid fa-flask"  style="font-size: 12px;"></i><a href="{% url 'project-detail-2' %}">Bioxilmaxillikni saqlash laboratoriyasi</a></li>
+                                 <li><i class="fa-solid fa-earth-americas" style="font-size: 12px;"></i><a href="{% url 'project-detail-3' %}">Yer resurslarini muhofaza qilish laboratoriyasi</a></li>
+                                 <li><i class="fa-solid fa-recycle"style="font-size: 12px;"></i><a href="{% url 'project-detail-6' %}">Chiqindilarni qayta ishlash va utilizatsiya qilish laboratoriyasi</a></li>
+                                 <li><i class="fa-solid fa-hand-holding-droplet"style="font-size: 12px;"></i><a href="{% url 'project-detail-8' %}">“Suv resurslarini muhofaza qilish texnologiyalari” laboratoriyasi</a></li>
+                                 <li><i class="fa-solid fa-flask"style="font-size: 12px;"></i><a href="{% url 'project-detail-5' %}">Ilmiy-tajriba stansiyasi</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </section>
+      <!--Footer Start-->
+   {% endblock content %}
+   {%block footer %}
+      {% for footerNew in footerNews%}
+         <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+            <strong>
+               <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+            </strong>
+            <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+         </li>
+   {% endfor %}
+   {%endblock footer%}
