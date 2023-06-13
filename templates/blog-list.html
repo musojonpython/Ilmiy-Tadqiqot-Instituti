@@ -25,7 +25,7 @@
                <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{listNews.image.url}}" alt=""> </div>
                <div class="post-txt">
                   <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{listNews.created_at|date}}</span>
-                  <h5><a href="#">{{listNews.title}}</a></h5>
+                  <h5><a href="{% url 'news-detail' listNews.id %}">{{listNews.title}}</a></h5>
                   <p>{{listNews.content|truncatechars:200}}</p>
                   <a href="{% url 'news-detail' listNews.id%}" class="rm">KO'PROQ O'QISH</a>
                </div>

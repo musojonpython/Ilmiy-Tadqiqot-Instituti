@@ -1,9 +1,13 @@
-jQuery(document).ready(function($) {
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+          items: 4, // no. of items
+          nav: true, // if you want navigation arrows make it true otherwise false
+          dots: true // if you want pagination dots make it true otherwise false
+        });
     "use strict"
 
     // ------- Home Slider Start ------- //
-    if ($('#home-slider').length) {
-        $('#home-slider').owlCarousel({
+   $('#home-slider').owlCarousel({
             loop: true,
             margin: 0,
             nav: true,
@@ -12,9 +16,14 @@ jQuery(document).ready(function($) {
             autoplay: true,
 
         })
-    }
     // ------- Home Slider End ------- //
-	
+
+    $('.owl-carousel').owlCarousel({
+      items: 4, // no. of items
+      nav: true, // if you want navigation arrows make it true otherwise false
+      dots: true // if you want pagination dots make it true otherwise false
+    });
+
 	
 	// ------- Pic Slider ------- //
     if ($('#pic-slider').length) {
@@ -358,9 +367,7 @@ jQuery(document).ready(function($) {
 	}
 	
 	// ------- TimeLine End ------- //
-	
-	
-	
+
 	// ------- Search Overlay Start ------- //
 	
 	if ($('a[href="#search"]').length) {
@@ -381,27 +388,8 @@ jQuery(document).ready(function($) {
 		})
 		});
 	}
-	
-	// ------- Search Overlay End ------- //
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 	// ------- Counter ------- //
 	if ($('.countdown').length) {
 		var austDay = new Date();

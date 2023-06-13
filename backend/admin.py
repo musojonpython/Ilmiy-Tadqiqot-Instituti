@@ -6,6 +6,10 @@ class EmployeeAdmin(admin.ModelAdmin):
     ordering = ["-id"]
     search_fields = ["fio", "rank"]
 
+@admin.register(models.NewsUrl)
+class NewsUrlAdmin(admin.ModelAdmin):
+    list_display = ["author", "title", "content", "image"]
+
 class PostImageInline(admin.TabularInline):
     model = models.PostImages
     readonly_fields = ('id', 'post')

@@ -4,6 +4,7 @@ class NewsUrl(models.Model):
     author = models.CharField(max_length=100)
     title = models.CharField(max_length=120)
     content = models.TextField()
+    related_words = models.CharField(max_length=200)
     image = models.ImageField(upload_to="newsphoto/")
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
 

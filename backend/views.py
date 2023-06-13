@@ -31,7 +31,6 @@ def projectDetail7(request):
 
     return render(request, "projects-details-7.html", context)
 
-
 def projectDetail6(request):
     context = {
         "footerNews": NewsUrl.objects.all().order_by("created_at")[:4]
