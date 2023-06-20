@@ -1,0 +1,91 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+  <!--Inner Header Start-->
+  <section class="wf100 p100 inner-header">
+    <div class="container">
+      <h1>Yangiliklar</h1>
+      <ul>
+         <li><a href="{% url 'home-page' %}">Institut</a></li>
+         <li><a href="{% url 'news-pages' %}">Yangiliklar</a></li>
+         <li><a href="{% url 'aboutPages'%}">Batafsil ma'lumot</a></li>
+      </ul>
+    </div>
+  </section>
+  <!--Inner Header End-->
+    <section class="wf100 p80 blog">
+          <div class="blog-details">
+            <div class="container">  <!--Header Start-->
+            <!--Blog Start-->
+                <div class="row">
+                     <div class="col-lg-9 col-md-8">
+                        <!--Blog Single Content Start-->
+                        <div class="blog-single-content">
+                           <div class="blog-single-thumb"><img src="{{ news.image.url }}" alt=""></div>
+                           <ul class="post-meta">
+                              <li><i class="fas fa-user-circle"></i> {{news.author}}</li>
+                              <li><i class="fas fa-calendar-alt"></i> {{ news.published_time }}</li>
+                              <li><i class="fas fa-comments"></i> 134 Comments</li>
+                              <li class="tags"><i class="fas fa-tags"></i> <a href="#">Plant</a> <a href="#">Trees</a> <a href="#">Water</a> <a href="#">Recycling</a></li>
+                           </ul>
+                           <p> {{news.content }}</p>
+                        </div>
+                        <!--Blog Single Content End-->
+                     </div>
+<!--                  <div class="col-md-12">-->
+<!--                    &lt;!&ndash;Blog Posts Start&ndash;&gt;-->
+<!--                    <div class="blog-single-content">-->
+<!--                      &lt;!&ndash;Blog Post Start&ndash;&gt;-->
+<!--                      <div class="blog-single-thumb">-->
+<!--                        <div class="blog-single-thumb">  <img  src="{{ news.image.url }}" alt=""> </div>-->
+<!--                        <div class="blog-txt">-->
+<!--                          <h3><a href="#">{{ news.title }}</a></h3>-->
+<!--                          <ul class="post-meta">-->
+<!--                            <li> <a href="#"><i class="fas fa-user-circle"></i> {{news.author}}</a> </li>-->
+<!--                            <li> <a href="#"><i class="fas fa-calendar-alt"></i> {{ news.created_at}}</a> </li>-->
+<!--                            <li class="post-tags"><i class="fas fa-tags"></i> <a href="#">O'simlik</a>, <a href="#">Daraxtlar</a>, <a href="#">Suv</a>, <a href="#">Qayta ishlash</a> </li>-->
+<!--                          </ul>-->
+<!--                          <p>-->
+<!--                              {{ news.content }}-->
+<!--                          </p>-->
+<!--                           </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+                </div>
+              <!--Widget End-->
+              <!--Related Posts Start-->
+              <div class="wf100 related-posts">
+                <h4>A'loqador Yangiliklar</h4>
+                <ul>
+                    {% for newsList in newsesList%}
+                   <li>
+                      <div class="rp-box">
+                         <div class="post-thumb"> <a href="{% url 'news-detail' newsList.id %}"><i class="fas fa-link"></i></a>
+                             <img style="width:350px; height: 300px; margin-bottom:20px" src="{{ newsList.image.url }}" alt=""> </div>
+                         <h6> <a href="{% url 'news-detail' newsList.id %}">{{newsList.title|truncatechars:50}}</a> </h6>
+                          <p>{{ newsList.content|truncatewords:15 }}</p>
+                         <ul class="post-meta">
+                            <li> <a href="#"><i class="fas fa-calendar-alt"></i> {{ newsList.created_at|date }}</a> </li>
+                         </ul>
+                      </div>
+                   </li>
+                    {% endfor %}
+                </ul>
+             </div>
+             <!--Related Posts End-->
+            </div>
+          </div>
+    </section>
+{% endblock content %}
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}

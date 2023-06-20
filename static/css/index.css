@@ -1,1 +1,62 @@
-{% load static %}
+.joy{
+    width: 285px;
+    height: 100px;
+    margin-top: 20px;
+ }
+ .ikonkachalar{
+    color: green;
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 20px;
+ }
+ .ikonkachalar:hover{
+    border-radius: 20px;
+    font-size: 40px;
+ }
+ .yangiliklar{
+    width: 68px;
+    height: 68px;
+ }
+ .li-flex{
+    display: flex;
+ }
+ .story-title-bg{
+    background: linear-gradient(rgba(204,204,204,1) 0%, rgba(204,204,204,1) 100%);;
+ }
+ .move{
+    margin-right: 10px;
+ }
+ .footer-yozuv__div{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+ }
+ .footer-yozuv{
+    display: flex;
+    align-items: flex-start;
+ }
+ .footer-yozuv i{
+    margin-top: 3px;
+ }
+ .name-footer{
+    color: greenyellow;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 600;
+ }
+
+html {
+scroll-behavior: smooth;;
+}
+.patner__div{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1cd8d2, #93edc7);
+  color: white;
+  margin: 100px 0;
+  border-radius: 7px;
+  }

@@ -6018,6 +6018,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 .slick-slide.slick-current strong {
 	color: #66bb6a;
 }
+
 .timeline .slick-slide h3 {
 	margin-bottom: 19px;
 }
@@ -6058,6 +6059,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 	color: #666;
 	line-height: 24px;
 }
+
 .eco-history .col-4 {
 	padding: 0 3px;
 }
@@ -6833,3 +6835,20 @@ New added css styles
     background-image: url('/static/images/experience.jpg');
     background-size: cover;
  }
+
+.patner__div{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1cd8d2, #93edc7);
+  color: white;
+  margin: 100px 0;
+  border-radius: 7px;
+  }
+.footer-yozuv {
+    line-height: 22px;
+    font-size:14px;
+}

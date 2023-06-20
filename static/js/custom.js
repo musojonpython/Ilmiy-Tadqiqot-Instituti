@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+
   $('.owl-carousel').owlCarousel({
           items: 4, // no. of items
           nav: true, // if you want navigation arrows make it true otherwise false
@@ -329,7 +331,7 @@ $(document).ready(function(){
 			asNavFor: '.timeline-nav'
 		});
 	}
-	
+
 	if ($('.timeline-nav').length) {
 		$('.timeline-nav').slick({
 			slidesToShow: 3,

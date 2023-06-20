@@ -1,0 +1,1008 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static '/images/website-logo.png' %}">
+      <title>Atrof-muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot instituti</title>
+      <!-- CSS FILES START -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/prettyPhoto.css' %}" >
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" >
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <style>
+       .patner__div{
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+         height: 250px;
+         width: 250px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: linear-gradient(to right, #1cd8d2, #93edc7);
+         color: white;
+         margin: 100px 0;
+         border-radius: 7px;
+      }
+       .joy{
+            width: 285px;
+            height: 100px;
+            margin-top: 20px;
+         }
+         .ikonkachalar{
+            color: green;
+            font-size: 30px;
+            padding: 15px;
+            margin-top: 20px;
+         }
+         .ikonkachalar:hover{
+            border-radius: 20px;
+            font-size: 40px;
+         }
+         .yangiliklar{
+            width: 68px;
+            height: 68px;
+         }
+         .li-flex{
+            display: flex;
+         }
+         .story-title-bg{
+            background: linear-gradient(rgba(204,204,204,1) 0%, rgba(204,204,204,1) 100%);;
+         }
+         .move{
+            margin-right: 10px;
+         }
+         .footer-yozuv__div{
+            display: flex;
+            flex-direction: column;
+         }
+         .footer-yozuv{
+            display: flex;
+            align-items: flex-start;
+         }
+         .footer-yozuv i{
+            margin-top: 3px;
+         }
+         .name-footer{
+            color: greenyellow;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+            font-weight: 600;
+         }
+         .our-success-story {
+            padding: 40px 0 80px;
+        }
+        .story-title-bg {
+            background: url("/static/images/experience.jpg") no-repeat;
+            background-size: cover;
+            width: 100%;
+            float: left;
+            position: relative;
+            padding: 88px 67px;
+            }
+        .eco-history .col-4 {
+            padding: 0 3px;
+        }
+        .eco-history .row {
+            margin-right: -3px;
+            margin-left: -3px;
+        }
+
+        .timeline .slick-slide h3 {
+            margin-bottom: 19px;
+        }
+        .timeline .slick-slide p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .timeline .slick-slide p:last-child {
+            margin: 0px;
+        }
+        .timeline .slick-slide .checklist {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        .timeline .slick-slide .checklist li {
+            line-height: 26px;
+        }
+        .timeline .slick-slide .checklist li:before {
+            content: "\f105";
+            font-family: FontAwesome;
+            color: #d32f2f;
+            margin-right: 5px;
+        }
+        .timeline-box {
+            background: #f7f7f7;
+            border: 1px solid #eeeeee;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .timeline-box h6 {
+            color: #222;
+            font-weight: 600;
+        }
+        .timeline-box p {
+            font-size: 16px;
+            color: #666;
+            line-height: 24px;
+        }
+        <!--New timeLines to django-->
+
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+        *, *::after, *::before {
+          box-sizing: border-box;
+        }
+
+        html {
+          font-size: 62.5%;
+        }
+
+        body {
+          font-size: 1.6rem;
+          font-family: "Arial", sans-serif;
+          color: #383838;
+        }
+
+        /* --------------------------------
+
+        Main Components
+
+        -------------------------------- */
+
+        .cd-horizontal-timeline a {
+          text-decoration: none;
+        }
+        .cd-horizontal-timeline {
+          opacity: 0;
+          margin: 2em auto;
+          -webkit-transition: opacity 0.2s;
+          -moz-transition: opacity 0.2s;
+          transition: opacity 0.2s;
+        }
+        .cd-horizontal-timeline::before {
+          /* never visible - this is used in jQuery to check the current MQ */
+          content: 'mobile';
+          display: none;
+        }
+        .cd-horizontal-timeline.loaded {
+          /* show the timeline after events position has been set (using JavaScript) */
+          opacity: 1;
+        }
+        .cd-horizontal-timeline .timeline {
+          position: relative;
+          height: 100px;
+          width: 90%;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .cd-horizontal-timeline .events-wrapper {
+          position: relative;
+          height: 100%;
+          margin: 0 40px;
+          overflow: hidden;
+        }
+        .cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+          /* these are used to create a shadow effect at the sides of the timeline */
+          content: '';
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          height: 100%;
+          width: 20px;
+        }
+        .cd-horizontal-timeline .events-wrapper::before {
+          left: 0;
+          background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+          background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+        }
+        .cd-horizontal-timeline .events-wrapper::after {
+          right: 0;
+          background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+          background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+        }
+        .cd-horizontal-timeline .events {
+          /* this is the grey line/timeline */
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 49px;
+          height: 2px;
+          /* width will be set using JavaScript */
+          background: #dfdfdf;
+          -webkit-transition: -webkit-transform 0.4s;
+          -moz-transition: -moz-transform 0.4s;
+          transition: transform 0.4s;
+        }
+        .cd-horizontal-timeline .filling-line {
+          /* this is used to create the green line filling the timeline */
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background-color: #fd8204;
+          -webkit-transform: scaleX(0);
+          -moz-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          -o-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transform-origin: left center;
+          -moz-transform-origin: left center;
+          -ms-transform-origin: left center;
+          -o-transform-origin: left center;
+          transform-origin: left center;
+          -webkit-transition: -webkit-transform 0.3s;
+          -moz-transition: -moz-transform 0.3s;
+          transition: transform 0.3s;
+        }
+        .cd-horizontal-timeline .events a {
+          position: absolute;
+          bottom: 0;
+          z-index: 2;
+          text-align: center;
+          font-size: 1.3rem;
+          padding-bottom: 15px;
+          color: #383838;
+          /* fix bug on Safari - text flickering while timeline translates */
+          -webkit-transform: translateZ(0);
+          -moz-transform: translateZ(0);
+          -ms-transform: translateZ(0);
+          -o-transform: translateZ(0);
+          transform: translateZ(0);
+        }
+        .cd-horizontal-timeline .events a::after {
+          /* this is used to create the event spot */
+          content: '';
+          position: absolute;
+          left: 50%;
+          right: auto;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          bottom: -5px;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          border: 2px solid #fd8204;
+          background-color: #f8f8f8;
+          -webkit-transition: background-color 0.3s, border-color 0.3s;
+          -moz-transition: background-color 0.3s, border-color 0.3s;
+          transition: background-color 0.3s, border-color 0.3s;
+        }
+        .no-touch .cd-horizontal-timeline .events a:hover::after {
+          background-color: #085796;
+          border-color: #085796;
+        }
+        .cd-horizontal-timeline .events a.selected {
+          pointer-events: none;
+        }
+        .cd-horizontal-timeline .events a.selected::after {
+          background-color: #085796;
+          border-color: #085796;
+        }
+        @media only screen and (min-width: 1100px) {
+          .cd-horizontal-timeline {
+            margin: 6em auto;
+          }
+          .cd-horizontal-timeline::before {
+            /* never visible - this is used in jQuery to check the current MQ */
+            content: 'desktop';
+          }
+        }
+
+        .cd-timeline-navigation a {
+          /* these are the left/right arrows to navigate the timeline */
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          bottom: auto;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          height: 34px;
+          width: 34px;
+          border-radius: 50%;
+          border: 2px solid #dfdfdf;
+          color: #dfdfdf;
+          /* replace text with an icon */
+          overflow: hidden;
+          color: transparent;
+          text-indent: 100%;
+          white-space: nowrap;
+          -webkit-transition: border-color 0.3s;
+          -moz-transition: border-color 0.3s;
+          transition: border-color 0.3s;
+        }
+        .cd-timeline-navigation a:hover {
+          border: 2px solid #005695;
+          color: #005695;
+        }
+
+        .cd-timeline-navigation a.prev::before {
+          content:  "\f053";
+          font-family: FontAwesome;
+          color: #ccc;
+          font-size: 1.4rem;
+          display: block;
+          position:absolute;
+          top: 9px;
+          left: -22px;
+          z-index: 10000;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+        }
+
+        .cd-timeline-navigation a.next::before {
+          content:  "\f054";
+          font-family: FontAwesome;
+          font-size: 1.4rem;
+          display: block;
+          position:absolute;
+          top: 9px;
+          left: -18px;
+          z-index: 10000;
+          color: #ccc;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+        }
+
+        .cd-timeline-navigation a:hover:before {
+          color: #005695;
+        }
+
+
+        .cd-timeline-navigation a.next {
+          right: 0;
+        }
+
+
+        .no-touch .cd-timeline-navigation a:hover {
+          border-color: #7b9d6f;
+        }
+        .cd-timeline-navigation a.inactive {
+          cursor: not-allowed;
+        }
+        .cd-timeline-navigation a.inactive::after {
+          background-position: 0 -16px;
+        }
+        .no-touch .cd-timeline-navigation a.inactive:hover {
+          border-color: #dfdfdf;
+        }
+
+        .cd-horizontal-timeline .events-content {
+          position: relative;
+          width: 100%;
+          margin: 2em 0;
+          overflow: hidden;
+          -webkit-transition: height 0.4s;
+          -moz-transition: height 0.4s;
+          transition: height 0.4s;
+        }
+        .cd-horizontal-timeline .events-content li {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          left: 0;
+          top: 0;
+          -webkit-transform: translateX(-100%);
+          -moz-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+          -o-transform: translateX(-100%);
+          transform: translateX(-100%);
+          padding: 0 5%;
+          opacity: 0;
+          -webkit-animation-duration: 0.4s;
+          -moz-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+          -webkit-animation-timing-function: ease-in-out;
+          -moz-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+        }
+        .cd-horizontal-timeline .events-content li.selected {
+          /* visible event content */
+          position: relative;
+          z-index: 2;
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          -moz-transform: translateX(0);
+          -ms-transform: translateX(0);
+          -o-transform: translateX(0);
+          transform: translateX(0);
+        }
+        .cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+          -webkit-animation-name: cd-enter-right;
+          -moz-animation-name: cd-enter-right;
+          animation-name: cd-enter-right;
+        }
+        .cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+          -webkit-animation-name: cd-enter-left;
+          -moz-animation-name: cd-enter-left;
+          animation-name: cd-enter-left;
+        }
+        .cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+          -webkit-animation-direction: reverse;
+          -moz-animation-direction: reverse;
+          animation-direction: reverse;
+        }
+        .cd-horizontal-timeline .events-content li > * {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .cd-horizontal-timeline .events-content h2 {
+          color: #005695;
+          font-weight: bold;
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+        .cd-horizontal-timeline .events-content em {
+          display: block;
+          font-style: italic;
+          margin: 10px auto;
+        }
+        .cd-horizontal-timeline .events-content em::before {
+          content: '- ';
+        }
+        .cd-horizontal-timeline .events-content p {
+          font-size: 1.4rem;
+          color: #959595;
+        }
+        .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+          line-height: 1.6;
+        }
+        .cd-horizontal-timeline .events-content p {
+          display: block;
+          margin-bottom: 15px;
+        }
+        @media only screen and (min-width: 768px) {
+          .cd-horizontal-timeline .events-content h2 {
+            font-size: 2.6rem;
+            color: #005695;
+          }
+          .cd-horizontal-timeline .events-content em {
+            font-size: 2rem;
+          }
+          .cd-horizontal-timeline .events-content p {
+            font-size: 1.8rem;
+          }
+        }
+
+        @-webkit-keyframes cd-enter-right {
+          0% {
+            opacity: 0;
+            -webkit-transform: translateX(100%);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+          }
+        }
+        @-moz-keyframes cd-enter-right {
+          0% {
+            opacity: 0;
+            -moz-transform: translateX(100%);
+          }
+          100% {
+            opacity: 1;
+            -moz-transform: translateX(0%);
+          }
+        }
+        @keyframes cd-enter-right {
+          0% {
+            opacity: 0;
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            transform: translateX(100%);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+            -moz-transform: translateX(0%);
+            -ms-transform: translateX(0%);
+            -o-transform: translateX(0%);
+            transform: translateX(0%);
+          }
+        }
+        @-webkit-keyframes cd-enter-left {
+          0% {
+            opacity: 0;
+            -webkit-transform: translateX(-100%);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+          }
+        }
+        @-moz-keyframes cd-enter-left {
+          0% {
+            opacity: 0;
+            -moz-transform: translateX(-100%);
+          }
+          100% {
+            opacity: 1;
+            -moz-transform: translateX(0%);
+          }
+        }
+        @keyframes cd-enter-left {
+          0% {
+            opacity: 0;
+            -webkit-transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+            -moz-transform: translateX(0%);
+            -ms-transform: translateX(0%);
+            -o-transform: translateX(0%);
+            transform: translateX(0%);
+          }
+        }
+
+
+
+
+   </style>
+   <body>
+      <!--Header Start-->
+         <header class="header-style-2">
+            <nav class="navbar navbar-expand-lg">
+               <a class="navbar-brand" href="{% url 'home-page' %}"><img class="logo-still" src="{% static 'images/website-logo.png' %}" alt=""></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home-page'%}">Institut</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'aboutPages'%}">Batafsil</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news-pages' %}">Yangiliklar</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#loyihalarPage">Loyihalar</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'project-detail' %}">Faoliyat</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#boglanish">Bog'lanish</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#ilmiyJurnal">Ilmiy Jurnal</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'openBudget-pages'%]">Ochiq Ma'lumotlar</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+      <!--Header End-->
+         {% block content%}
+         {% endblock content%}
+       <!--Footer Start-->
+      <footer class="footer" style="background-color: black;">
+         <div class="footer-top wf100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                      <!--Footer Widget Start-->
+                    <div style="margin-right: 15%;" class="footer-widget footer-qism">
+
+                    <div class="footer-yozuv__div">
+                     <div class="footer-yozuv">
+                           <img style="width: 50px;height: 50px;margin-right: 20px;" src="{% static 'images/website-logo.png' %}" alt="">
+                           <p class="name-footer">Atrof muhit va tabiatni muhofaza qilish
+                               instituti</p>
+                     </div>
+                     <div style="width: 300px;" class="footer-yozuv">
+                           <i style="color: white;" class="fa-solid fa-location-dot move"></i>
+                           <p>Oʼzbekiston Respublikasi, Toshkent shahri, Chilonzor  tumani, <br> Bunyodkor shoh koʼchasi, 7-А uy <br></p>
+                     </div>
+                     <div class="footer-yozuv">
+                           <i style="color: white;" class="fa-solid fa-clock move"></i>
+                           <p>Ish vaqti : 9.00 - 18.00 <br></p>
+                     </div>
+                     <div class="footer-yozuv">
+                           <i style="color: white;" class="fa-solid fa-mug-hot move"></i>
+                           <p>Tushlik : 13.00 - 14.00 <br></p>
+                     </div>
+                     <div class="footer-yozuv">
+                           <i style="color: white;" class="fa-regular fa-building-lock move"></i>
+                           <p>Dam olish kuni: Shanba, Yakshanba <br></p>
+                     </div>
+                     <div class="footer-yozuv">
+                           <i style="color: white;" class="fa-solid fa-square-envelope move"></i>
+                           <p>E-mail : info@eco.gov.uz<br></p>
+                     </div>
+                     <div class="footer-yozuv">
+                           <i style="color: green;" class="fa-solid fa-phone move"></i>
+                           <p>Bog'lanish :
+                           +998 71 207-11-07<br>
+                           (+99871) 207-07-70 <br></p>
+                     </div>
+
+                  </div>
+                      </div>
+                      <!--Footer Widget End-->
+                   </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                     <!--Footer Widget Start-->
+                     <div class="footer-widget">
+                        <h4>So'nggi Yangiliklar</h4>
+                        <ul class="lastest-products">
+                           {% block footer%}
+                           {% endblock footer%}
+                        </ul>
+                     </div>
+                     <!--Footer Widget End-->
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div style="width: 100%; height: 100%;" class="footer-widget footer-qism">
+                            <iframe style="margin-top: 30px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.6486414220926!2d69.2254687!3d41.2947508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b62ad6c0735%3A0x2260c74fb009b861!2z0I7Qt9Cx0LXQutC40YHRgtC-0L0g0KDQtdGB0L_Rg9Cx0LvQuNC60LDRgdC4INCt0LrQvtC70L7Qs9C40Y8g0LLQsCDQsNGC0YDQvtGEINC80YPSs9C40YLQvdC4INC80YPSs9C-0YTQsNC30LAg0pvQuNC70LjRiCDQtNCw0LLQu9Cw0YIg0pvRntC80LjRgtCw0YHQuA!5e0!3m2!1sen!2s!4v1682565479652!5m2!1sen!2s"
+                            title="This is a unique title"   width="100%" height="60%" allowFullScreen loading="lazy"></iframe>
+                            <div class="joy">
+                                <a href="Instagram.com/uzecoit"> <i class="fa-brands fa-instagram ikonkachalar"></i></a>
+                                <a href="Facebook.com/uzecoit"> <i class="fa-brands fa-facebook ikonkachalar"></i></a>
+                                <a href="https://t.me/Ecoilm"><i class="fa-brands fa-telegram ikonkachalar"></i></a>
+                                <a href=" YouTube.com/@uzecoit"><i class="fa-brands fa-youtube ikonkachalar"></i></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+         </div>
+         <!-- ifraganus logo start-->
+         <div class="footer-copyr wf100">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4 col-sm-4"> <img src="{% static 'images/iFraganus-IT-team-logo.jpg' %}" alt="iFragnus-team-logo"> </div>
+                  <div class="col-md-8 col-sm-8">
+                     <p> All Rights Reserved of iFragnus Team, Design & Developed By: iFragnus Team  </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <!-- ifraganus logo start-->
+      </footer>
+      <!--Footer End-->
+      <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+      <script type="text/javascript" src="{% static 'owlcarousel/owl.carousel.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery-3.3.1.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery-migrate-1.4.1.min.js'%}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/popper.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/bootstrap.min.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/jquery.prettyPhoto.js' %}" ></script>
+      <script type="text/javascript" src="{% static '/bootstrap/js/isotope.min.js' %}" ></script>
+      <script defer src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <script>
+      $(document).ready(function(){
+<!--      -->
+    var timelines = $('.cd-horizontal-timeline'),
+		eventsMinDistance = 60;
+
+	(timelines.length > 0) && initTimeline(timelines);
+
+	function initTimeline(timelines) {
+		timelines.each(function(){
+			var timeline = $(this),
+				timelineComponents = {};
+			//cache timeline components
+			timelineComponents['timelineWrapper'] = timeline.find('.events-wrapper');
+			timelineComponents['eventsWrapper'] = timelineComponents['timelineWrapper'].children('.events');
+			timelineComponents['fillingLine'] = timelineComponents['eventsWrapper'].children('.filling-line');
+			timelineComponents['timelineEvents'] = timelineComponents['eventsWrapper'].find('a');
+			timelineComponents['timelineDates'] = parseDate(timelineComponents['timelineEvents']);
+			timelineComponents['eventsMinLapse'] = minLapse(timelineComponents['timelineDates']);
+			timelineComponents['timelineNavigation'] = timeline.find('.cd-timeline-navigation');
+			timelineComponents['eventsContent'] = timeline.children('.events-content');
+
+			//assign a left postion to the single events along the timeline
+			setDatePosition(timelineComponents, eventsMinDistance);
+			//assign a width to the timeline
+			var timelineTotWidth = setTimelineWidth(timelineComponents, eventsMinDistance);
+			//the timeline has been initialize - show it
+			timeline.addClass('loaded');
+
+			//detect click on the next arrow
+			timelineComponents['timelineNavigation'].on('click', '.next', function(event){
+				event.preventDefault();
+				updateSlide(timelineComponents, timelineTotWidth, 'next');
+			});
+			//detect click on the prev arrow
+			timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
+				event.preventDefault();
+				updateSlide(timelineComponents, timelineTotWidth, 'prev');
+			});
+			//detect click on the a single event - show new event content
+			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
+				event.preventDefault();
+				timelineComponents['timelineEvents'].removeClass('selected');
+				$(this).addClass('selected');
+				updateOlderEvents($(this));
+				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
+				updateVisibleContent($(this), timelineComponents['eventsContent']);
+			});
+
+			//on swipe, show next/prev event content
+			timelineComponents['eventsContent'].on('swipeleft', function(){
+				var mq = checkMQ();
+				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'next');
+			});
+			timelineComponents['eventsContent'].on('swiperight', function(){
+				var mq = checkMQ();
+				( mq == 'mobile' ) && showNewContent(timelineComponents, timelineTotWidth, 'prev');
+			});
+
+			//keyboard navigation
+			$(document).keyup(function(event){
+				if(event.which=='37' && elementInViewport(timeline.get(0)) ) {
+					showNewContent(timelineComponents, timelineTotWidth, 'prev');
+				} else if( event.which=='39' && elementInViewport(timeline.get(0))) {
+					showNewContent(timelineComponents, timelineTotWidth, 'next');
+				}
+			});
+		});
+	}
+
+	function updateSlide(timelineComponents, timelineTotWidth, string) {
+		//retrieve translateX value of timelineComponents['eventsWrapper']
+		var translateValue = getTranslateValue(timelineComponents['eventsWrapper']),
+			wrapperWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
+		//translate the timeline to the left('next')/right('prev')
+		(string == 'next')
+			? translateTimeline(timelineComponents, translateValue - wrapperWidth + eventsMinDistance, wrapperWidth - timelineTotWidth)
+			: translateTimeline(timelineComponents, translateValue + wrapperWidth - eventsMinDistance);
+	}
+
+	function showNewContent(timelineComponents, timelineTotWidth, string) {
+		//go from one event to the next/previous one
+		var visibleContent =  timelineComponents['eventsContent'].find('.selected'),
+			newContent = ( string == 'next' ) ? visibleContent.next() : visibleContent.prev();
+
+		if ( newContent.length > 0 ) { //if there's a next/prev event - show it
+			var selectedDate = timelineComponents['eventsWrapper'].find('.selected'),
+				newEvent = ( string == 'next' ) ? selectedDate.parent('li').next('li').children('a') : selectedDate.parent('li').prev('li').children('a');
+
+			updateFilling(newEvent, timelineComponents['fillingLine'], timelineTotWidth);
+			updateVisibleContent(newEvent, timelineComponents['eventsContent']);
+			newEvent.addClass('selected');
+			selectedDate.removeClass('selected');
+			updateOlderEvents(newEvent);
+			updateTimelinePosition(string, newEvent, timelineComponents, timelineTotWidth);
+		}
+	}
+
+	function updateTimelinePosition(string, event, timelineComponents, timelineTotWidth) {
+		//translate timeline to the left/right according to the position of the selected event
+		var eventStyle = window.getComputedStyle(event.get(0), null),
+			eventLeft = Number(eventStyle.getPropertyValue("left").replace('px', '')),
+			timelineWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', '')),
+			timelineTotWidth = Number(timelineComponents['eventsWrapper'].css('width').replace('px', ''));
+		var timelineTranslate = getTranslateValue(timelineComponents['eventsWrapper']);
+
+        if( (string == 'next' && eventLeft > timelineWidth - timelineTranslate) || (string == 'prev' && eventLeft < - timelineTranslate) ) {
+        	translateTimeline(timelineComponents, - eventLeft + timelineWidth/2, timelineWidth - timelineTotWidth);
+        }
+	}
+
+	function translateTimeline(timelineComponents, value, totWidth) {
+		var eventsWrapper = timelineComponents['eventsWrapper'].get(0);
+		value = (value > 0) ? 0 : value; //only negative translate value
+		value = ( !(typeof totWidth === 'undefined') &&  value < totWidth ) ? totWidth : value; //do not translate more than timeline width
+		setTransformValue(eventsWrapper, 'translateX', value+'px');
+		//update navigation arrows visibility
+		(value == 0 ) ? timelineComponents['timelineNavigation'].find('.prev').addClass('inactive') : timelineComponents['timelineNavigation'].find('.prev').removeClass('inactive');
+		(value == totWidth ) ? timelineComponents['timelineNavigation'].find('.next').addClass('inactive') : timelineComponents['timelineNavigation'].find('.next').removeClass('inactive');
+	}
+
+	function updateFilling(selectedEvent, filling, totWidth) {
+		//change .filling-line length according to the selected event
+		var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
+			eventLeft = eventStyle.getPropertyValue("left"),
+			eventWidth = eventStyle.getPropertyValue("width");
+		eventLeft = Number(eventLeft.replace('px', '')) + Number(eventWidth.replace('px', ''))/2;
+		var scaleValue = eventLeft/totWidth;
+		setTransformValue(filling.get(0), 'scaleX', scaleValue);
+	}
+
+	function setDatePosition(timelineComponents, min) {
+		for (i = 0; i < timelineComponents['timelineDates'].length; i++) {
+		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
+		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
+		    timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
+		}
+	}
+
+	function setTimelineWidth(timelineComponents, width) {
+		var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length-1]),
+			timeSpanNorm = timeSpan/timelineComponents['eventsMinLapse'],
+			timeSpanNorm = Math.round(timeSpanNorm) + 4,
+			totalWidth = timeSpanNorm*width;
+		timelineComponents['eventsWrapper'].css('width', totalWidth+'px');
+		updateFilling(timelineComponents['timelineEvents'].eq(0), timelineComponents['fillingLine'], totalWidth);
+
+		return totalWidth;
+	}
+
+	function updateVisibleContent(event, eventsContent) {
+		var eventDate = event.data('date'),
+			visibleContent = eventsContent.find('.selected'),
+			selectedContent = eventsContent.find('[data-date="'+ eventDate +'"]'),
+			selectedContentHeight = selectedContent.height();
+
+		if (selectedContent.index() > visibleContent.index()) {
+			var classEnetering = 'selected enter-right',
+				classLeaving = 'leave-left';
+		} else {
+			var classEnetering = 'selected enter-left',
+				classLeaving = 'leave-right';
+		}
+
+		selectedContent.attr('class', classEnetering);
+		visibleContent.attr('class', classLeaving).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+			visibleContent.removeClass('leave-right leave-left');
+			selectedContent.removeClass('enter-left enter-right');
+		});
+		eventsContent.css('height', selectedContentHeight+'px');
+	}
+
+	function updateOlderEvents(event) {
+		event.parent('li').prevAll('li').children('a').addClass('older-event').end().end().nextAll('li').children('a').removeClass('older-event');
+	}
+
+	function getTranslateValue(timeline) {
+		var timelineStyle = window.getComputedStyle(timeline.get(0), null),
+			timelineTranslate = timelineStyle.getPropertyValue("-webkit-transform") ||
+         		timelineStyle.getPropertyValue("-moz-transform") ||
+         		timelineStyle.getPropertyValue("-ms-transform") ||
+         		timelineStyle.getPropertyValue("-o-transform") ||
+         		timelineStyle.getPropertyValue("transform");
+
+        if( timelineTranslate.indexOf('(') >=0 ) {
+        	var timelineTranslate = timelineTranslate.split('(')[1];
+    		timelineTranslate = timelineTranslate.split(')')[0];
+    		timelineTranslate = timelineTranslate.split(',');
+    		var translateValue = timelineTranslate[4];
+        } else {
+        	var translateValue = 0;
+        }
+
+        return Number(translateValue);
+	}
+
+	function setTransformValue(element, property, value) {
+		element.style["-webkit-transform"] = property+"("+value+")";
+		element.style["-moz-transform"] = property+"("+value+")";
+		element.style["-ms-transform"] = property+"("+value+")";
+		element.style["-o-transform"] = property+"("+value+")";
+		element.style["transform"] = property+"("+value+")";
+	}
+
+	//based on http://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript
+	function parseDate(events) {
+		var dateArrays = [];
+		events.each(function(){
+			var dateComp = $(this).data('date').split('/'),
+				newDate = new Date(dateComp[2], dateComp[1]-1, dateComp[0]);
+			dateArrays.push(newDate);
+		});
+	    return dateArrays;
+	}
+
+	function parseDate2(events) {
+		var dateArrays = [];
+		events.each(function(){
+			var singleDate = $(this),
+				dateComp = singleDate.data('date').split('T');
+			if( dateComp.length > 1 ) { //both DD/MM/YEAR and time are provided
+				var dayComp = dateComp[0].split('/'),
+					timeComp = dateComp[1].split(':');
+			} else if( dateComp[0].indexOf(':') >=0 ) { //only time is provide
+				var dayComp = ["2000", "0", "0"],
+					timeComp = dateComp[0].split(':');
+			} else { //only DD/MM/YEAR
+				var dayComp = dateComp[0].split('/'),
+					timeComp = ["0", "0"];
+			}
+			var	newDate = new Date(dayComp[2], dayComp[1]-1, dayComp[0], timeComp[0], timeComp[1]);
+			dateArrays.push(newDate);
+		});
+	    return dateArrays;
+	}
+
+	function daydiff(first, second) {
+	    return Math.round((second-first));
+	}
+
+	function minLapse(dates) {
+		//determine the minimum distance among events
+		var dateDistances = [];
+		for (i = 1; i < dates.length; i++) {
+		    var distance = daydiff(dates[i-1], dates[i]);
+		    dateDistances.push(distance);
+		}
+		return Math.min.apply(null, dateDistances);
+	}
+
+	/*
+		How to tell if a DOM element is visible in the current viewport?
+		http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+	*/
+	function elementInViewport(el) {
+		var top = el.offsetTop;
+		var left = el.offsetLeft;
+		var width = el.offsetWidth;
+		var height = el.offsetHeight;
+
+		while(el.offsetParent) {
+		    el = el.offsetParent;
+		    top += el.offsetTop;
+		    left += el.offsetLeft;
+		}
+
+		return (
+		    top < (window.pageYOffset + window.innerHeight) &&
+		    left < (window.pageXOffset + window.innerWidth) &&
+		    (top + height) > window.pageYOffset &&
+		    (left + width) > window.pageXOffset
+		);
+	}
+
+	function checkMQ() {
+		//check if mobile or desktop device
+		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
+	}
+
+<!---->
+
+
+
+        $('.owl-carousel').owlCarousel({
+          items: 4, // no. of items
+          nav: true, // if you want navigation arrows make it true otherwise false
+          dots: true // if you want pagination dots make it true otherwise false
+        });
+          AOS.init({
+           duration: 3000
+            });
+
+
+      });
+      </script>
+
+   </body>
+</html>

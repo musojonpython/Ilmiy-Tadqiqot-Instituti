@@ -38,7 +38,6 @@ def projectDetail6(request):
 
     return render(request, "projects-details-6.html", context)
 
-
 def projectDetail5(request):
     context = {
         "footerNews": NewsUrl.objects.all().order_by("created_at")[:4]
@@ -93,21 +92,16 @@ def secondProjectsList(request):
     }
     return render(request, 'event-list2.html', context)
 def aboutPage(request):
-    context = {
-    "footerNews":NewsUrl.objects.all().order_by("created_at")[5:8]
-    }
-    return render(request, "old-about.html", context)
+
+    return render(request, "about.html")
 
 def homePages(request):
-    context = {}
     lastJournal = JournalFilesUrl.objects.all().order_by("-created_at")[:4]
     lastNews = NewsUrl.objects.all().order_by("-created_at")[:4]
-    footerNews = NewsUrl.objects.all().order_by("-created_at")[5:8]
 
     context = {
         "lastJournal": lastJournal,
-        "lastNewses": lastNews,
-        "footerNews": footerNews
+        "lastNewses": lastNews
     }
     return render(request, "index.html", context)
 
@@ -117,12 +111,11 @@ def activityPages(request):
 
 def newsPages(request):
     listNewses = NewsUrl.objects.all()
-    footerNews = NewsUrl.objects.all().order_by("created_at")[5:8]
+
     context = {
         "listNewses": listNewses,
-        "footerNews": footerNews
     }
-    return render(request, 'blog-list.html', context)
+    return render(request, 'news-list.html', context)
 
 def connectPages(request):
     context = {}
@@ -133,19 +126,22 @@ def openBudgetPages(request):
     return render(request, 'open-budget.html', context)
 
 def scienceJournal(request):
-    journalList = JournalFilesUrl.objects.all().order_by("-created_at")
-    context = {}
-    return render(request, 'index.html', context)
+    journals = JournalFilesUrl.objects.all().order_by("-created_at")
+    context = {
+        "journals": journals
+    }
+    return render(request, 'journals-list.html', context)
 
 def newsDetail(request, id):
     news = get_object_or_404(NewsUrl, id=id)
     newsesList = NewsUrl.objects.all().order_by("-created_at")[:6]
+
     context = {
         "news": news,
         "newsesList": newsesList
     }
 
-    return render(request, "blog.html", context)
+    return render(request, "news-detail.html", context)
 
 
 # def employeeList(request):

@@ -1,47 +1,138 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block content %}
+<style>
+   div.pro-box img {
+      height: 380px;
+   }
+</style>
 
-<div class="wrapper home2" style="width:100%">
+<div class="wrapper home2">
    <!--Slider Start-->
-   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-     <div class="carousel-indicators">
-       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-     </div>
+   <section class="new-home-slider" class="owl-theme wf100" id="home-menu">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
 
-     <div class="carousel-inner">
-       <div class="carousel-item active">
-         <img  src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="...">
-       </div>
-       <div class="carousel-item">
-         <img  src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="...">
-       </div>
-       <div class="carousel-item">
-         <img src="{% static 'images/h2-slide1.jpg' %}" class="d-block w-100" alt="...">
-       </div>
-        <div class="carousel-item">
-         <img src="{% static 'images/h2-slide2.jpg' %}" class="d-block w-100" alt="...">
-       </div>
-        <div class="carousel-item">
-         <img src="{% static 'images/h2-slide3.jpg' %}" class="d-block w-100" alt="...">
-       </div>
-     </div>
+        <div class="carousel-inner">
+             <div class="carousel-item ">
+               <img  src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="...">
+             </div>
+             <div class="carousel-item ">
+               <img  src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="...">
+             </div>
+             <div class="carousel-item active">
+               <img src="{% static 'images/h2-slide1.jpg' %}" class="d-block w-100" alt="...">
+             </div>
+              <div class="carousel-item">
+               <img src="{% static 'images/h2-slide2.jpg' %}" class="d-block w-100" alt="...">
+             </div>
+              <div class="carousel-item">
+               <img src="{% static 'images/h2-slide3.jpg' %}" class="d-block w-100" alt="...">
+             </div>
+        </div>
 
-     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Previous</span>
-     </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   </section>
 
-     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-       <span class="visually-hidden">Next</span>
-     </button>
+<!--    <section class="services-area wf100">-->
+<!--      <div class="container">-->
+<!--         <ul style="width:100%">-->
+<!--             <li style="width:25%">-->
+<!--                <div class="sinfo" >-->
+<!--                   <img src="{% static 'images/qoriqxona.png' %}" alt="">-->
+<!--                   <h6>Muhofaza Etiladigan tabiiy hududlar</h6>-->
+<!--                   <p>Qo'riqxona, Bog'lar</p>-->
+<!--                </div>-->
+<!--             </li>-->
+<!--             <li style="width:25%">-->
+<!--                <div class="sinfo">-->
+<!--                   <img src="{% static 'images/boglar.png' %}" alt="">-->
+<!--                   <a href="{% url 'first-projects' %}"> <h6>Bioxilmaxillikni saqlash</h6></a>-->
+<!--                </div>-->
+<!--                 <a  href="{% url 'first-projects'%}">Ko'proq</a>-->
+<!--             </li>-->
+<!--             <li style="width:25%">-->
+<!--                <div class="sinfo">-->
+<!--                   <img src="{% static 'images/tabiatyodgorligi.png' %}" alt="">-->
+<!--                   <h6>CHiqindilarni qayta ishlash va utilizatsiya </h6>-->
+<!--                   <p>Suv resurslarini saqlang</p>-->
+<!--                </div>-->
+<!--             </li>-->
+<!--             <li style="width:25%">-->
+<!--                <div class="sinfo">-->
+<!--                   <img src="{% static 'images/biosferarezervati.png' %}" alt="">-->
+<!--                   <h6>Yashil o'sish va ilqim o'zgarishi</h6>-->
+<!--                   <p>Tabbiy energiyani saqlang</p>-->
+<!--                </div>-->
+<!--             </li>-->
+<!--             <li style="width:25%">-->
+<!--                  <div class="sinfo">-->
+<!--                     <img src="{% static 'images/jayronpitomnigi.png' %}" alt="">-->
+<!--                     <h6>Atmosfera havosini muhofaza qilish </h6>-->
+<!--                     <p>O'simliklarni hayot uchun tirik qiling</p>-->
+<!--                  </div>-->
+<!--               </li>-->
+<!--         </ul>-->
+<!--      </div>-->
+<!--    </section>-->
 
-   </div>
+    <section class="services-area wf100 mt-0.4">
+      <div class="container">
+          <h3 style="color:white; text-align:center">Muhozafa etiladigan tabiiy muhitlar.</h3>
+         <ul style="width:100%">
+             <li style="width:25%">
+                <div class="sinfo" >
+                   <img src="{% static 'images/qoriqxona.png' %}" alt="">
+                   <h6>Qo'riqxonalar</h6>
+                   <p>Davlat, Majmua, Buyurtma</p>
+                </div>
+             </li>
+             <li style="width:25%">
+                <div class="sinfo">
+                   <img src="{% static 'images/boglar.png' %}" alt="">
+                   <h6>Bog'lar</h6>
+                   <p>Tabiat, Milliy</p>
+                </div>
+             </li>
+             <li style="width:25%">
+                <div class="sinfo">
+                   <img src="{% static 'images/tabiatyodgorligi.png' %}" alt="">
+                   <h6>Tabiat Yodgorliklari</h6>
+                   <p>Suv resurslarini saqlang</p>
+                </div>
+             </li>
+             <li style="width:25%">
+                <div class="sinfo">
+                   <img src="{% static 'images/biosferarezervati.png' %}" alt="">
+                   <h6>Biosfera Reservati</h6>
+                   <p>Tabbiy energiyani saqlang</p>
+                </div>
+             </li>
+             <li style="width:25%">
+                  <div class="sinfo">
+                     <img src="{% static 'images/jayronpitomnigi.png' %}" alt="">
+                     <h6>Jayron maxsus pitomnigi </h6>
+                     <p>O'simliklarni hayot uchun tirik qiling</p>
+                  </div>
+               </li>
+         </ul>
+      </div>
+    </section>
+
 
 <!--   <section class="new-home-slider" class="owl-theme wf100">-->
 <!--      <div class="item">-->
@@ -93,152 +184,283 @@
 <!--         </div>-->
 <!--         <img src="{% static 'images/h2-slide3.jpg' %}" alt="">-->
 <!--      </div>-->
-
-
 <!--   </section>-->
+
    <!--Slider End-->
    <!--Service Area Start-->
-   <section class="services-area wf100 p100">
-      <h4 class="services-area__title">O`zbekiston Respublikasidagi muhofaza tabiiy etiladigan hududlar</h4>
-      <div class="services-area__content">
-         <ul>
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">
-                  <h6>7 ta</h6>
-                  <p>Davlat Qo'riqxonasi</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">
-                  <h6>1 ta</h6>
-                  <p>Majmua Qo'riqxonasi</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/environment.png" alt="">
-                  <h6>12 ta</h6>
-                  <p>Tabiat Bog'i</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/environment.png" alt="">
-                  <h6>1 ta</h6>
-                  <p>Milliy Bog'</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/ecology.png" alt="">
-                  <h6>11 ta</h6>
-                  <p>Tabiat Yodgorligi</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/ecology.png" alt="">
-                  <h6>2 ta</h6>
-                  <p>Biosfera Reservati</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">
-                  <h6>12 ta</h6>
-                  <p>Buyurtma Qo'riqxonasi</p>
-               </div>
-            </li>
-            <!--box  end-->
-            <!--box  start-->
-            <li>
-               <div class="sinfo">
-                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">
-                  <h6>1 ta</h6>
-                  <p>Jayron maxsus pitomnigi</p>
-               </div>
-            </li>
-            <!--box  end-->
-         </ul>
-      </div>
-   </section>
+
+<!--   <section class="services-area wf100 p100">-->
+<!--      <h4 class="services-area__title">O`zbekiston Respublikasidagi muhofaza tabiiy etiladigan hududlar</h4>-->
+<!--      <div class="services-area__content">-->
+<!--         <ul>-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">-->
+<!--                  <h6>7 ta</h6>-->
+<!--                  <p>Davlat Qo'riqxonasi</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">-->
+<!--                  <h6>1 ta</h6>-->
+<!--                  <p>Majmua Qo'riqxonasi</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/environment.png" alt="">-->
+<!--                  <h6>12 ta</h6>-->
+<!--                  <p>Tabiat Bog'i</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/environment.png" alt="">-->
+<!--                  <h6>1 ta</h6>-->
+<!--                  <p>Milliy Bog'</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/ecology.png" alt="">-->
+<!--                  <h6>11 ta</h6>-->
+<!--                  <p>Tabiat Yodgorligi</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/ecology.png" alt="">-->
+<!--                  <h6>2 ta</h6>-->
+<!--                  <p>Biosfera Reservati</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">-->
+<!--                  <h6>12 ta</h6>-->
+<!--                  <p>Buyurtma Qo'riqxonasi</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--            &lt;!&ndash;box  start&ndash;&gt;-->
+<!--            <li>-->
+<!--               <div class="sinfo">-->
+<!--                  <img src="http://www.ecoilm.uz/earth-day.png" alt="">-->
+<!--                  <h6>1 ta</h6>-->
+<!--                  <p>Jayron maxsus pitomnigi</p>-->
+<!--               </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash;box  end&ndash;&gt;-->
+<!--         </ul>-->
+<!--      </div>-->
+<!--   </section>-->
    <!--Service Area End-->
    <!--About Section Start-->
+
+
    <section class="home2-about wf100 p100 gallery">
       <div class="container">
          <div class="row">
-            <div class="col-md-5">
-               <div class="video-img"> <a href="https://youtu.be/UL0V0M7ZRxo" data-rel="prettyPhoto" title="Vimeo video"><i class="fas fa-play"></i></a>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/UL0V0M7ZRxo" title="YouTube video player" frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+               <div >
+                   <img src="{% static 'images/main Photo.jpg'%}" class="img-fluid">
                </div>
             </div>
-            <div class="col-md-7">
-              <div class="h2-about-txt">
-                  <h4>O‘zbekiston Respublikasi Vazirlar Mahkamasining <br>
-                     Atrof muhit va tabiatni muhofaza qilish
-                     texnologiyalari ilmiy-tadqiqot instituti faoliyatini yanada takomillashtirish chora-tadbirlari to‘g‘risida”
-                     2022 yil 18 avgustda VM-458-son qarori qabul qilindi. </h4>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="h2-about-txt" >
+                  <h4 style="line-height: 1.5;">
+                    Butunjahon atrof-muhit kuni munosabati bilan O’zbekiston Respublikasi Ekologiya, atrof-muhitni mohofaza qilish va iqlim o’zgarishi vaziri Aziz Abduhokimovning tabrik so'zi
+                  </h4>
                   <p>
-                     <a class="aboutus" href="https://lex.uz/uz/docs/-6162576">Batafsil</a>
+                     <a target="_blank" href="https://uznature.uz/ru/site/news?id=3279"><button class="btn btn-success btn-lg">Batafsil</button></a>
                   </p>
                </div>
             </div>
          </div>
       </div>
-      <div class="home-facts counter pt80">
-         <div class="container">
-            <div class="h2-about-txt">
-               <h3> Atrof muhit va tabiatni muhofaza qilish </h3>
-            </div>
+    </section>
 
-            <div class="row">
-               <div class="col-lg-3 col-sm-6 col-md-3">
-                  <div class="counter-box">
-                     <p class="counter-count">51</p>
-                     <p class="ctxt">Hamkorlik Memorandumlari </p>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6 col-md-3">
-                  <div class="counter-box">
-                     <p class="counter-count">50</p>
-                     <p class="ctxt">Amalga Oshirilgan Loyihalar</p>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6 col-md-3">
-                  <div class="counter-box">
-                     <p class="counter-count">15</p>
-                     <p class="ctxt">Hamkorlikda Erishilgan Ijobiy Natijalar.</p>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6 col-md-3">
-                  <div class="counter-box">
-                     <p class="counter-count">45</p>
-                     <p class="ctxt">Targ'ibot va Tashbiqot Ishlari.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
+   <div class="our-success-story wf100">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-lg-4">
+                       <div class="story-title-bg"> <strong class="t1">Eco Ilm</strong> <strong class="t2">20+</strong> <strong class="t3">Yillik tajriba</strong>
+                       </div>
+                    </div>
+                    <div class="col-lg-8">
+                       <div class="section-title-2">
+                          <h5>Bizning Tariximiz Haqida</h5>
+                          <h2>Bizning Muvaffaqqiyat Tariximiz</h2>
+                       </div>
+                       <!--eco History Start-->
+                       <div class="eco-history">
+                          <div class="timeline-slider">
+                             <div class="timeline-nav">
+                                <div><span><strong>1964 - 1967</strong></span></div>
+                                <div><span><strong>1967 - 2017</strong></span></div>
+                                <div><span><strong>2017 - 2018 </strong></span></div>
+                                <div><span><strong>2018 - 2023</strong></span></div>
+                             </div>
+                             <div class="timeline">
+                                <!--Timeline Text Start-->
+                                <div>
+                                   <div class="row">
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Biz Boshladik</h6>
+                                            <p> Toshkent suv ta’minoti, kanalizatsiya, gidrotexnika inshootlari va muhandislik gidrogeologiyasi (ToshNII 'VODGЕO') instituti.   </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Mehnatning Samarasi</h6>
+                                            <p> 1960 yilda Markaziy Osiyo arxitektura va qurilish ilmiy-tadqiqot institutida aholi punktlari sanoatining suv xo‘jaligi laboratoriyasi sifatida tashkil etilgan.  </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Ish </h6>
+                                            <p>  1964 yilda U 'VODGЕO' Butunittifoq ilmiy-tadqiqot institutida suv xo‘jaligi bo‘limi, 1978 yilda esa 'VODGЕO' Butunittifoq ilmiy-tadqiqot institutining Toshkent filialiga aylantirildi. </p>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <!--Timeline Text End-->
+                                <!--Timeline Text Start-->
+                                <div>
+                                   <div class="row">
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Mehnatning Samarasi</h6>
+                                            <p>  1992 yil dekabr oyidan boshlab institut O‘zbekiston Respublikasi Tabiatni muhofaza qilish davlat qo‘mitasining tarkibiy bo‘linmasi hisoblanadi.  </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Ish</h6>
+                                            <p>  O‘zbekiston Respublikasi Prezidentining 2017 yil 21 apreldagi PQ-2915-sonli 'O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish davlat qo‘mitasi faoliyatini tashkil etishni ta’minlash chora-tadbirlari to‘g‘risida' gi farmonini bajarish maqsadida. </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6> Biz Boshladik </h6>
+                                            <p>Guvohnomaning 2017 yil 21 avgustdagi 538681-sonli ma’lumotiga ko‘ra, O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish davlat qo‘mitasi, O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish ilmiy-tadqiqot instituti ish faoliyatini boshladi.  </p>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <!--Timeline Text End-->
+                                <!--Timeline Text Start-->
+                                <div>
+                                   <div class="row">
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6> Biz Boshladik</h6>
+                                            <p> O‘zR Davlat Ekologiya qo‘mitasi huzuridagi Ekologiya va atrof-muhitni muhofaza qilish ilmiy-tadqiqot instituti ToshITI 'SUVGЕO', 'ITLTI ATMOSFЕRA' va NPGP 'Suvni boshqarish ekologiyasi' ning huquqiy vorisi bo‘lgan.  </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Mehnatning Samarasi</h6>
+                                            <p> O‘zbekiston Respublikasi Vazirlar Mahkamasining 2018 yil 26 noyabrdagi 958-sonli 'Ekologiya va atrof-muhitni muhofaza qilish sohasidagi ilmiy tadqiqot bazasini yanada rivojlantirish chora-tadbirlari to‘g‘risida' gi qarorini bajarish. </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Ish </h6>
+                                            <p> O‘zbekiston Respublikasi Ekologiya bo‘yicha davlat qo‘mitasining 2018 yil 29 noyabrdagi 417-sonli buyrug‘iga asosan O‘zbekiston Respublikasi Davlat ekologiya qo‘mitasi huzuridagi Atrof-muhit va tabiatni muhofaza qilish texnologiyalar ilmiy-tadqiqot instituti' ga aylantirildi. </p>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                <!--Timeline Text End-->
+                                <!--Timeline Text Start-->
+                                <div>
+                                   <div class="row">
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Mehnatning Samarasi</h6>
+                                            <p> Hozirgi vaqtda chiqindilarni va tabiiy suvlarni toksik moddalardan, og‘ir metallardan, biogen elementlardan tozalash, suv, tuproq va tuproqlarni neft mahsulotlaridan tozalash bo‘yicha ishlanmalar eng katta qiziqish va dolzarblikdir. </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Ish</h6>
+                                            <p>  Institut respublikamizdagi ifloslanishni kamaytirish va sanoat, qishloq xo‘jaligi va kommunal obyektlardan tabiiy suv manbalariga quyiladigan chiqindi suvlar hajmini kamaytirishga qaratilgan.Suvni muhofaza qilish texnologiyalarini ishlab chiqish bo‘yicha asosiy tadqiqot tashkilotlaridan biri hisoblanadi </p>
+                                         </div>
+                                      </div>
+                                      <div class=" col-4">
+                                         <div class="timeline-box">
+                                            <h6>Biz boshladik</h6>
+                                            <p> Shahar kanalizatsiya tizimiga va ochiq suv havzalariga tushirish me’yorlariga erishish, shu bilan ochiq suv havzalari hamda atrof-muhitga antropogen bosimni kamaytirishga imkon beradigan maishiy va ishlab chiqarish chiqindi suvlari, ularning aralashmalarini tozalash va tozalashdan so‘ng qilinadigan tadbirlarni ishlab chikadi.  </p>
+                                         </div>
+                                      </div>
+                                   </div>
+                                </div>
+                                   </div>
+                                </div>
+                                <!--Timeline Text End-->
+                             </div>
+                          </div>
+                 </div>
+              </div>
+        </div>
+
+   <div class="container">
+<!--         <div class="home-facts pt80">-->
+<!--         <div class="container">-->
+<!--            <div class="h2-about-txt ">-->
+<!--               <h3> Hamkorlik va Tashbiqot ishlari </h3>-->
+<!--            </div>-->
+<!--            <div class="row" style="margin-top:-70px">-->
+<!--               <div class="col-lg-3 col-sm-6 col-md-3 patner__div mr-4"  data-aos="zoom-in">-->
+<!--                  <div >-->
+<!--                     <p class="counter-count">51</p>-->
+<!--                     <p class="ctxt">Hamkorlik Memorandumlari </p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-lg-3 col-sm-6 col-md-3 patner__div mr-4"  data-aos="zoom-in">-->
+<!--                  <div>-->
+<!--                     <p class="counter-count">50</p>-->
+<!--                     <p class="ctxt">Amalga Oshirilgan Loyihalar</p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-lg-3 col-sm-6 col-md-3 patner__div mr-4" data-aos="zoom-in">-->
+<!--                  <div >-->
+<!--                     <p class="counter-count">15</p>-->
+<!--                     <p class="ctxt">Hamkorlikda Erishilgan Ijobiy Natijalar.</p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-lg-3 col-sm-6 col-md-3 patner__div mr-4" data-aos="zoom-in">-->
+<!--                  <div >-->
+<!--                     <p class="counter-count">45</p>-->
+<!--                     <p class="ctxt">Targ'ibot va Tashbiqot Ishlari.</p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </div>-->
       </div>
    </section>
+<!--   2020 okt 1MLn 45 MLN -->
    <!--About Section End-->
    <!--Loyihalar Start-->
-   <section class="wf100 p50 current-projects">
+   <section class="wf100 p50 current-projects" id="loyihalarPage">
+
       <div class="container">
          <div class="row">
             <div class="col-lg-6">
@@ -253,11 +475,11 @@
                <div class="tab-content" id="myTabContent">
                   <!--WildLife Slider Start-->
                   <div class="tab-pane fade show active" id="wildlife" role="tabpanel" aria-labelledby="wildlife-tab">
-                     <div class="cpro-slider owl-carousel owl-theme">
+                     <div class="cpro-slider owl-carousel owl-theme" >
                         <!--Pro Box-->
                         <div class="item">
                            <div class="pro-box">
-                              <img src="{% static 'images/bioxilmaxillik.jpg' %}" alt="">
+                              <img  src="{% static 'images/bio-xilma-xillik.jpg' %}" alt="">
                               <h5>Bioxilmaxillikni saqlash</h5>
                               <div class="pro-hover">
                                  <h6>Bioxilmaxillikni saqlash</h6>
@@ -270,7 +492,7 @@
                         <!--Pro Box-->
                         <div class="item">
                            <div class="pro-box">
-                              <img src="{% static 'images/recycling.jpg' %}" alt="">
+                              <img  src="{% static 'images/recycling.jpg' %}" alt="">
                               <h5>Chiqindilarni qayta ishlash va utilizatsiya qilish</h5>
                               <div class="pro-hover">
                                  <h6>Chiqindilarni qayta ishlash va utilizatsiya qilish</h6>
@@ -283,7 +505,7 @@
                         <!--Pro Box-->
                         <div class="item">
                            <div class="pro-box">
-                              <img src="{% static 'images/yashil-oshish.jpg' %}" alt="">
+                              <img src="{% static 'images/01Yashil-osimlik.jpg' %}" alt="">
                               <h5>Yashil o‘sish va iqlim o‘zgarishi
                               </h5>
                               <div class="pro-hover">
@@ -297,7 +519,7 @@
                         <!--Pro Box End-->
                         <div class="item">
                            <div class="pro-box">
-                              <img src="{% static 'images/atmosfera.jpg' %}" alt="">
+                              <img src="{% static 'images/atrof-muhit.jpg' %}" alt="">
                               <h5> Atmosfera havosini muhofaza qilish
                               </h5>
                               <div class="pro-hover">
@@ -334,12 +556,13 @@
                 {% for lastNews in lastNewses %}
                 {% if forloop.counter <= 2%}
                <div class="blog-small-post">
-                  <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{lastNews.image.url}}" alt=""> </div>
+                  <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a>
+                      <img class="img-fluid" src="{{lastNews.image.url}}" alt=""> </div>
                   <div class="post-txt">
                      <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{lastNews.created_at}}</span>
-                     <h5><a href="{% url 'news-detail' lastNews.id %}">{{lastNews.title}}</a></h5>
-                     <p>{{lastNews.content|truncatewords:8}}</p>
-                     <a href="{% url 'news-detail' lastNews.id %}"    class="rm">Ko'proq</a>
+                     <h5><a href="{% url 'news-detail' lastNews.id %}">{{lastNews.title|truncatechars:50}}</a></h5>
+                     <p>{{lastNews.content|truncatechars:100}}</p>
+                     <a href="{% url 'news-detail' lastNews.id %}"  class="rm">Ko'proq</a>
                   </div>
                </div>
                 {% endif %}
@@ -352,8 +575,8 @@
                   <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{lastNews.image.url}}" alt=""> </div>
                   <div class="post-txt">
                      <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{lastNews.created_at}}</span>
-                     <h5><a href="{% url 'news-detail' lastNews.id %}">{{lastNews.title}}</a></h5>
-                     <p>{{lastNews.content|truncatewords:8}}</p>
+                     <h5><a href="{% url 'news-detail' lastNews.id %}">{{lastNews.title|truncatechars:50}}</a></h5>
+                     <p>{{lastNews.content|truncatechars:100}}</p>
                      <a href="{% url 'news-detail' lastNews.id %}" class="rm">Ko'proq</a>
                   </div>
                </div>
@@ -366,24 +589,25 @@
    </section>
    <!--Yangiliklar bo'limi End-->
    <!--Ilmiy journal-->
-   <section class="online-shop wf100 p50">
+   <section class="online-shop wf100 p50" id="ilmiyJurnal">
       <div class="container">
          <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                <div class="section-title-2 text-center">
                 <h5>“Ekologiya xabarnomasi” Ijtimoiy-iqtisodiy, ilmiy-amaliy</h5>
                         <p>jurnali so`nggi chop etilgan sonlari</p>
                </div>
             </div>
+               <div class="col-md-3 mb-3"> <a href="{% url 'science-pages' %}" class="view-more">Ko'proq Jurnallar</a> </div>
          </div>
          <div class="row">
             <!--Pro Box Start-->
             {% for journal in lastJournal%}
             <div class="col-md-3 col-sm-6">
                <div class="product-box">
-                  <div class="pro-thumb"> <a href="{{ journal.files.url }}">Yuklab olish</a> <img src="{{ journal.image.url }}" alt=""></div>
+                  <div class="pro-thumb"> <a href="{{ journal.files.url }}" target="_blank" >Yuklab olish</a> <img src="{{ journal.image.url }}" alt=""></div>
                   <div class="pro-txt">
-                     <h6><a href="#!">{{journal.title}}</a></h6>
+                     <h6 ><a  href="#!">{{journal.title}}</a></h6>
                   </div>
                </div>
             </div>
@@ -422,7 +646,7 @@
                      </div>
 
                      <li>
-                        <textarea rows="5" cols="129" placeholder="  Muroajatlaringizni kiriting"></textarea>
+                        <textarea class="form-control" placeholder="  Muroajatlaringizni kiriting"></textarea>
                      </li>
                      <li>
                         <input type="submit" class="fsubmit" value=" Ro'yhatdan o'tish">
@@ -437,13 +661,14 @@
 
    {% endblock content%}
 </div>
-   {%block footer %}
-      {% for footerNew in footerNews%}
-         <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
-            <strong>
-               <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatechars:100}}</a>
-            </strong>
-            <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at|date}}</span>
-         </li>
-   {% endfor %}
-   {%endblock footer%}
+{%block footer %}
+   {% for footerNew in footerNews%}
+      <li> <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+         <strong>
+            <a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatechars:100}}</a>
+         </strong>
+         <span class="pdate"><i>Chop etildi:</i>{{footerNew.created_at|date}}</span>
+      </li>
+{% endfor %}
+{%endblock footer%}
+

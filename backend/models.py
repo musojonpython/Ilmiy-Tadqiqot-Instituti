@@ -1,12 +1,34 @@
+from django.utils import timezone
+
 from django.db import models
+from django.utils.translation import gettext_lazy as _
+
+
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(status=NewsUrl.Status.Published)
 
 class NewsUrl(models.Model):
+
+    objects = models.Manager()
+    published = PublishedManager()
+
+    class Status(models.TextChoices):
+        Draft = "DF", "Draft"
+        Published = 'PB', 'Published'
+
     author = models.CharField(max_length=100)
-    title = models.CharField(max_length=120)
+    title = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250)
     content = models.TextField()
     related_words = models.CharField(max_length=200)
     image = models.ImageField(upload_to="newsphoto/")
-    created_at = models.DateTimeField(auto_now_add=True, auto_now=False)
+    published_time = models.DateTimeField(default=timezone.now)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    status = models.CharField(max_length=2,
+                              choices=Status.choices,
+                              default=Status.Draft)
 
     class Meta:
         ordering = ["-created_at"]
@@ -54,10 +76,24 @@ class OpenBudgetFiles(models.Model):
     def __str__(self):
         return self.title
 
+
 class JournalFilesUrl(models.Model):
+    class TypeJournalList(models.TextChoices):
+        KITOB = "PDF", _("Kitoblar")
+        WORD = "DOC", _("Wordlar")
+        RASM = "JPG", _("Rasmlar")
+
+    type_of_journal = models.CharField(
+        max_length=3,
+        choices=TypeJournalList.choices,
+        default=TypeJournalList.KITOB,
+    )
+
     title = models.CharField(max_length=150)
+    content = models.TextField()
     image = models.ImageField(upload_to="journalImages/")
     files = models.FileField(upload_to="journalFiles/")
+    published_date = models.DateField(auto_now=False, auto_now_add=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

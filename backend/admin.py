@@ -8,7 +8,11 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 @admin.register(models.NewsUrl)
 class NewsUrlAdmin(admin.ModelAdmin):
-    list_display = ["author", "title", "content", "image"]
+    list_display = ["title", "slug", 'published_time', "status", "image"]
+    list_filter = ['status', 'created_at', 'published_time']
+    prepopulated_fields = {'slug': ('title',)}
+    search_fields = ['title', 'body']
+    ordering = ['status', 'published_time']
 
 class PostImageInline(admin.TabularInline):
     model = models.PostImages

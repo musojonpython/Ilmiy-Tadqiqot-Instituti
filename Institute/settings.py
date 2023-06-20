@@ -33,13 +33,16 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'bootstrap',
     "fontawesome",
+    # 'djangocms_slick_slider.apps.DjangocmsSlickSliderConfig',
+    # 'django.contrib.sites.models.Site',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend'
+    'backend',
+
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'backend.context_processor.footer_news'
             ],
         },
     },
