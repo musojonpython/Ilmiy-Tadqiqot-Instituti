@@ -5,6 +5,11 @@
    div.pro-box img {
       height: 380px;
    }
+   .carousel-item {
+        display:none;
+        position: relative;
+        .transition(.1s ease-in-out left);
+   }
 </style>
 
 <div class="wrapper home2">
@@ -18,21 +23,20 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
-
         <div class="carousel-inner">
              <div class="carousel-item ">
-               <img  src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="...">
+               <img  src="{% static 'images/slide-2.jpg' %}" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-item ">
-               <img  src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="...">
+               <img  src="{% static 'images/slide-1.jpg' %}" class="d-block w-100" alt="...">
              </div>
-             <div class="carousel-item active">
+             <div class="carousel-item ">
                <img src="{% static 'images/h2-slide1.jpg' %}" class="d-block w-100" alt="...">
              </div>
-              <div class="carousel-item">
+              <div class="carousel-item ">
                <img src="{% static 'images/h2-slide2.jpg' %}" class="d-block w-100" alt="...">
              </div>
-              <div class="carousel-item">
+              <div class="carousel-item active">
                <img src="{% static 'images/h2-slide3.jpg' %}" class="d-block w-100" alt="...">
              </div>
         </div>
@@ -92,43 +96,44 @@
 
     <section class="services-area wf100 mt-0.4">
       <div class="container">
-          <h3 style="color:white; text-align:center">Muhozafa etiladigan tabiiy muhitlar.</h3>
+          <h3 style="color:white">Ekologiya, Atrof-muhit muxofazasi va iqlim o'zgarishi yo'nalishida olib borilayotgan ilmiy tadqiqotlar </h3>
          <ul style="width:100%">
              <li style="width:25%">
                 <div class="sinfo" >
                    <img src="{% static 'images/qoriqxona.png' %}" alt="">
-                   <h6>Qo'riqxonalar</h6>
+                   <h6>Bioxilmaxillik</h6>
                    <p>Davlat, Majmua, Buyurtma</p>
                 </div>
              </li>
              <li style="width:25%">
                 <div class="sinfo">
                    <img src="{% static 'images/boglar.png' %}" alt="">
-                   <h6>Bog'lar</h6>
+                   <h6>Yer va suv resurslari</h6>
                    <p>Tabiat, Milliy</p>
                 </div>
              </li>
              <li style="width:25%">
                 <div class="sinfo">
                    <img src="{% static 'images/tabiatyodgorligi.png' %}" alt="">
-                   <h6>Tabiat Yodgorliklari</h6>
+                   <h6>Atmosfera ifloslanishi</h6>
                    <p>Suv resurslarini saqlang</p>
                 </div>
              </li>
              <li style="width:25%">
                 <div class="sinfo">
                    <img src="{% static 'images/biosferarezervati.png' %}" alt="">
-                   <h6>Biosfera Reservati</h6>
+                   <h6>Iqlim o'zgarishi</h6>
                    <p>Tabbiy energiyani saqlang</p>
                 </div>
              </li>
              <li style="width:25%">
                   <div class="sinfo">
                      <img src="{% static 'images/jayronpitomnigi.png' %}" alt="">
-                     <h6>Jayron maxsus pitomnigi </h6>
+                     <h6>Ekologik targ'ibotlar </h6>
                      <p>O'simliklarni hayot uchun tirik qiling</p>
                   </div>
                </li>
+
          </ul>
       </div>
     </section>
@@ -298,9 +303,46 @@
               <div class="container">
                  <div class="row">
                     <div class="col-lg-4">
-                       <div class="story-title-bg"> <strong class="t1">Eco Ilm</strong> <strong class="t2">20+</strong> <strong class="t3">Yillik tajriba</strong>
+                       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                             <div class="carousel-indicators">
+                               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                             </div>
+                             <div class="carousel-inner">
+                               <div class="carousel-item active">
+                                 <img src="{% static 'images/history-1.jpg' %}" class="d-block w-100" alt="...">
+                                 <div class="carousel-caption d-none d-md-block">
+                                   <h5>Bizning erishgan yutuqlar</h5>
+                                   <p>Some representative placeholder content for the first slide.</p>
+                                 </div>
+                               </div>
+                               <div class="carousel-item">
+                                 <img src="{% static 'images/history-2.jpg' %}" class="d-block w-100" alt="...">
+                                 <div class="carousel-caption d-none d-md-block">
+                                   <h5>Second slide label</h5>
+                                   <p>Some representative placeholder content for the second slide.</p>
+                                 </div>
+                               </div>
+                               <div class="carousel-item">
+                                 <img src="{% static 'images/konfrensiyajpg.jpg' %}" class="d-block w-100" alt="...">
+                                 <div class="carousel-caption d-none d-md-block">
+                                   <h5>Qizil kitobdagi hayvonlar </h5>
+                                   <p>Hayvonlarni asraylik ular bizga kerak</p>
+                                 </div>
+                               </div>
+                             </div>
+                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                               <span class="visually-hidden">Previous</span>
+                             </button>
+                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                               <span class="visually-hidden">Next</span>
+                             </button>
+                           </div>
                        </div>
-                    </div>
+
                     <div class="col-lg-8">
                        <div class="section-title-2">
                           <h5>Bizning Tariximiz Haqida</h5>
@@ -419,6 +461,132 @@
                  </div>
               </div>
         </div>
+
+<!--   <div class="our-success-story wf100">-->
+<!--              <div class="container">-->
+<!--                 <div class="row">-->
+<!--                    <div class="col-lg-4">-->
+<!--                       <div class="story-title-bg"> <strong class="t1">Eco Ilm</strong> <strong class="t2">20+</strong> <strong class="t3">Yillik tajriba</strong>-->
+<!--                       </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-8">-->
+<!--                       <div class="section-title-2">-->
+<!--                          <h5>Bizning Tariximiz Haqida</h5>-->
+<!--                          <h2>Bizning Muvaffaqqiyat Tariximiz</h2>-->
+<!--                       </div>-->
+<!--                       &lt;!&ndash;eco History Start&ndash;&gt;-->
+<!--                       <div class="eco-history">-->
+<!--                          <div class="timeline-slider">-->
+<!--                             <div class="timeline-nav">-->
+<!--                                <div><span><strong>1964 - 1967</strong></span></div>-->
+<!--                                <div><span><strong>1967 - 2017</strong></span></div>-->
+<!--                                <div><span><strong>2017 - 2018 </strong></span></div>-->
+<!--                                <div><span><strong>2018 - 2023</strong></span></div>-->
+<!--                             </div>-->
+<!--                             <div class="timeline">-->
+<!--                                &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                <div>-->
+<!--                                   <div class="row">-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Biz Boshladik</h6>-->
+<!--                                            <p> Toshkent suv ta’minoti, kanalizatsiya, gidrotexnika inshootlari va muhandislik gidrogeologiyasi (ToshNII 'VODGЕO') instituti.   </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Mehnatning Samarasi</h6>-->
+<!--                                            <p> 1960 yilda Markaziy Osiyo arxitektura va qurilish ilmiy-tadqiqot institutida aholi punktlari sanoatining suv xo‘jaligi laboratoriyasi sifatida tashkil etilgan.  </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Ish </h6>-->
+<!--                                            <p>  1964 yilda U 'VODGЕO' Butunittifoq ilmiy-tadqiqot institutida suv xo‘jaligi bo‘limi, 1978 yilda esa 'VODGЕO' Butunittifoq ilmiy-tadqiqot institutining Toshkent filialiga aylantirildi. </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                <div>-->
+<!--                                   <div class="row">-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Mehnatning Samarasi</h6>-->
+<!--                                            <p>  1992 yil dekabr oyidan boshlab institut O‘zbekiston Respublikasi Tabiatni muhofaza qilish davlat qo‘mitasining tarkibiy bo‘linmasi hisoblanadi.  </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Ish</h6>-->
+<!--                                            <p>  O‘zbekiston Respublikasi Prezidentining 2017 yil 21 apreldagi PQ-2915-sonli 'O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish davlat qo‘mitasi faoliyatini tashkil etishni ta’minlash chora-tadbirlari to‘g‘risida' gi farmonini bajarish maqsadida. </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6> Biz Boshladik </h6>-->
+<!--                                            <p>Guvohnomaning 2017 yil 21 avgustdagi 538681-sonli ma’lumotiga ko‘ra, O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish davlat qo‘mitasi, O‘zbekiston Respublikasi Ekologiya va atrof-muhitni muhofaza qilish ilmiy-tadqiqot instituti ish faoliyatini boshladi.  </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                <div>-->
+<!--                                   <div class="row">-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6> Biz Boshladik</h6>-->
+<!--                                            <p> O‘zR Davlat Ekologiya qo‘mitasi huzuridagi Ekologiya va atrof-muhitni muhofaza qilish ilmiy-tadqiqot instituti ToshITI 'SUVGЕO', 'ITLTI ATMOSFЕRA' va NPGP 'Suvni boshqarish ekologiyasi' ning huquqiy vorisi bo‘lgan.  </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Mehnatning Samarasi</h6>-->
+<!--                                            <p> O‘zbekiston Respublikasi Vazirlar Mahkamasining 2018 yil 26 noyabrdagi 958-sonli 'Ekologiya va atrof-muhitni muhofaza qilish sohasidagi ilmiy tadqiqot bazasini yanada rivojlantirish chora-tadbirlari to‘g‘risida' gi qarorini bajarish. </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Ish </h6>-->
+<!--                                            <p> O‘zbekiston Respublikasi Ekologiya bo‘yicha davlat qo‘mitasining 2018 yil 29 noyabrdagi 417-sonli buyrug‘iga asosan O‘zbekiston Respublikasi Davlat ekologiya qo‘mitasi huzuridagi Atrof-muhit va tabiatni muhofaza qilish texnologiyalar ilmiy-tadqiqot instituti' ga aylantirildi. </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                                &lt;!&ndash;Timeline Text Start&ndash;&gt;-->
+<!--                                <div>-->
+<!--                                   <div class="row">-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Mehnatning Samarasi</h6>-->
+<!--                                            <p> Hozirgi vaqtda chiqindilarni va tabiiy suvlarni toksik moddalardan, og‘ir metallardan, biogen elementlardan tozalash, suv, tuproq va tuproqlarni neft mahsulotlaridan tozalash bo‘yicha ishlanmalar eng katta qiziqish va dolzarblikdir. </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Ish</h6>-->
+<!--                                            <p>  Institut respublikamizdagi ifloslanishni kamaytirish va sanoat, qishloq xo‘jaligi va kommunal obyektlardan tabiiy suv manbalariga quyiladigan chiqindi suvlar hajmini kamaytirishga qaratilgan.Suvni muhofaza qilish texnologiyalarini ishlab chiqish bo‘yicha asosiy tadqiqot tashkilotlaridan biri hisoblanadi </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                      <div class=" col-4">-->
+<!--                                         <div class="timeline-box">-->
+<!--                                            <h6>Biz boshladik</h6>-->
+<!--                                            <p> Shahar kanalizatsiya tizimiga va ochiq suv havzalariga tushirish me’yorlariga erishish, shu bilan ochiq suv havzalari hamda atrof-muhitga antropogen bosimni kamaytirishga imkon beradigan maishiy va ishlab chiqarish chiqindi suvlari, ularning aralashmalarini tozalash va tozalashdan so‘ng qilinadigan tadbirlarni ishlab chikadi.  </p>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;Timeline Text End&ndash;&gt;-->
+<!--                             </div>-->
+<!--                          </div>-->
+<!--                 </div>-->
+<!--              </div>-->
+<!--        </div>-->
 
    <div class="container">
 <!--         <div class="home-facts pt80">-->
@@ -617,46 +785,48 @@
    </section>
    <!--Ilmiy journal End-->
    <!--Bog'lanish bo'limi-->
-   <div id="boglanish" class="choose-ecova wf100 p50">
-         <div class="container">
-            <div class="row">
-            <div class="col-lg-12">
-               <div class="volunteer-form">
-                  <div class="section-title">
-                     <h3>Veb sayt orqali murojat qilish</h3>
-                  </div>
-                  <ul>
-                     <div class="row">
-                        <li class="col-lg-6">
-                           <input type="text" class="form-control" placeholder="Ismingizni kiriting" aria-label="Your Name">
-                        </li>
+<!--   <div id="boglanish" class="choose-ecova wf100 p50">-->
+<!--         <div class="container">-->
+<!--            <div class="row">-->
+<!--            <div class="col-lg-12">-->
+<!--               <div class="volunteer-form">-->
+<!--                  <div class="section-title">-->
+<!--                     <h3>Veb sayt orqali murojat qilish</h3>-->
+<!--                  </div>-->
+<!--                  <ul>-->
+<!--                     <div class="row">-->
+<!--                        <li class="col-lg-6">-->
+<!--                           <input type="text" class="form-control" placeholder="Ismingizni kiriting" aria-label="Your Name">-->
+<!--                        </li>-->
 
-                        <li class="col-lg-6">
-                           <input type="text" class="form-control" placeholder="Email Addressni kiriting" aria-label="Email Address">
-                        </li>
-                     </div>
+<!--                        <li class="col-lg-6">-->
+<!--                           <input type="text" class="form-control" placeholder="Email Addressni kiriting" aria-label="Email Address">-->
+<!--                        </li>-->
+<!--                     </div>-->
 
-                     <div class="row">
-                         <li class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="Telefon Raqamni kiriting" aria-label="Contact">
-                     </li>
-                     <li class="col-lg-6">
-                        <input type="text" class="form-control" placeholder="Manzilingizni Kiriting" aria-label="Contact">
-                     </li>
-                     </div>
+<!--                     <div class="row">-->
+<!--                         <li class="col-lg-6">-->
+<!--                        <input type="text" class="form-control" placeholder="Telefon Raqamni kiriting" aria-label="Contact">-->
+<!--                     </li>-->
+<!--                     <li class="col-lg-6">-->
+<!--                        <input type="text" class="form-control" placeholder="Manzilingizni Kiriting" aria-label="Contact">-->
+<!--                     </li>-->
+<!--                     </div>-->
 
-                     <li>
-                        <textarea class="form-control" placeholder="  Muroajatlaringizni kiriting"></textarea>
-                     </li>
-                     <li>
-                        <input type="submit" class="fsubmit" value=" Ro'yhatdan o'tish">
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-         </div>
-      </div>
+<!--                     <li>-->
+<!--                        <textarea class="form-control" placeholder="  Muroajatlaringizni kiriting"></textarea>-->
+<!--                     </li>-->
+<!--                     <li>-->
+<!--                        <input type="submit" class="fsubmit" value=" Ro'yhatdan o'tish">-->
+<!--                     </li>-->
+<!--                  </ul>-->
+<!--               </div>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--         </div>-->
+<!--      </div>-->
+
+
    <!--Bog'lanish bo'limi End -->
 
    {% endblock content%}
@@ -671,4 +841,5 @@
       </li>
 {% endfor %}
 {%endblock footer%}
+
 

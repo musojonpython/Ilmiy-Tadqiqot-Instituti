@@ -90,7 +90,8 @@ def secondProjectsList(request):
     context = {
         "footerNews": NewsUrl.objects.all().order_by("created_at")[5:8]
     }
-    return render(request, 'event-list2.html', context)
+    return render(request, 'eventsls'
+                           '-list2.html', context)
 def aboutPage(request):
 
     return render(request, "about.html")

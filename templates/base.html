@@ -39,16 +39,7 @@
             height: 100px;
             margin-top: 20px;
          }
-         .ikonkachalar{
-            color: green;
-            font-size: 30px;
-            padding: 15px;
-            margin-top: 20px;
-         }
-         .ikonkachalar:hover{
-            border-radius: 20px;
-            font-size: 40px;
-         }
+
          .yangiliklar{
             width: 68px;
             height: 68px;
@@ -79,6 +70,14 @@
             margin-bottom: 15px;
             font-weight: 600;
             font-size:20px;
+         }
+         .ikonkalar i {
+            font-size:30px;
+            margin-left:10px;
+
+         }
+         .ikonkalar i:hover {
+         color: #9ccc62;
          }
 
    </style>
@@ -125,52 +124,53 @@
          {% endblock content%}
        <!--Footer Start-->
       <footer class="footer" style="background-color: black;">
-         <div class="footer-top wf100">
-            <div class="container">
+         <div class="footer-top wf100 m-2">
+<!--            <div class="container">-->
                <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-6">
+                   <div class="col-lg-3 col-md-6 col-sm-6">
                       <!--Footer Widget Start-->
-                    <div style="margin-right: 15%;" class="footer-widget footer-qism">
-                    <div class="footer-yozuv__div">
-                     <div class="footer-yozuv">
-                           <img style="width: 50px;height: 50px;margin-right: 20px;" src="{% static 'images/website-logo.png' %}" alt="">
-                           <p class="name-footer"> Atrof muhit va tabiatni muhofaza qilish instituti</p>
-                     </div>
-                     <div style="width: 300px;" class="footer-yozuv">
-                           <i style="color: white;" class="fa-solid fa-location-dot move"></i>
-                           <p>Oʼzbekiston Respublikasi, Toshkent shahri, Chilonzor  tumani, <br> Bunyodkor shoh koʼchasi, 7-А uy <br></p>
-                     </div>
-                     <div class="footer-yozuv">
-                           <i style="color: white;" class="fa-solid fa-clock move"></i>
-                           <p>Ish vaqti : 9.00 - 18.00 <br></p>
-                     </div>
-                     <div class="footer-yozuv">
-                           <i style="color: white;" class="fa-solid fa-mug-hot move"></i>
-                           <p>Tushlik : 13.00 - 14.00 <br></p>
-                     </div>
-                     <div class="footer-yozuv">
+                    <div class="footer-widget footer-qism">
+                            <div class="footer-yozuv__div">
+                                 <div class="footer-yozuv">
+                                       <img style="width: 50px;height: 50px;margin-right: 20px;" src="{% static 'images/website-logo.png' %}" alt="">
+                                       <p style="font-size:20px; color:#9ccc62"> Atrof-muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot instituti</p>
+                                 </div>
+                                <div style="margin-left:15%">
+                                 <div style="width: 300px;" class="footer-yozuv">
+                                       <i style="color: white;" class="fa-solid fa-location-dot move"></i>
+                                       <p>Oʼzbekiston Respublikasi, Toshkent shahri, Chilonzor  tumani, <br> Bunyodkor shoh koʼchasi, 7-А uy <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color: white;" class="fa-solid fa-clock move"></i>
+                                       <p>Ish vaqti : 9.00 - 18.00 <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color: white;" class="fa-solid fa-mug-hot move"></i>
+                                       <p>Tushlik : 13.00 - 14.00 <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
 
-                           <p> <i class="fa-solid fa-calendar-days"></i> Dam olish kuni: Shanba, Yakshanba <br></p>
-                     </div>
-                     <div class="footer-yozuv">
-                           <i style="color: white;" class="fa-solid fa-square-envelope move"></i>
-                           <p>E-mail : info@eco.gov.uz<br></p>
-                     </div>
-                     <div class="footer-yozuv">
-                           <i style="color: green;" class="fa-solid fa-phone move"></i>
-                           <p>Bog'lanish :
-                           +998 71 207-11-07<br>
-                           (+99871) 207-07-70 <br></p>
-                     </div>
-
-                  </div>
+                                       <p> <i class="fa-solid fa-calendar-days"></i> Dam olish kuni: Shanba, Yakshanba <br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color: white;" class="fa-solid fa-square-envelope move"></i>
+                                       <p>E-mail : info@eco.gov.uz<br></p>
+                                 </div>
+                                 <div class="footer-yozuv">
+                                       <i style="color: green;" class="fa-solid fa-phone move"></i>
+                                       <p>Bog'lanish :
+                                       +998 71 207-11-07<br>
+                                       (+99871) 207-07-70 <br></p>
+                                 </div>
+                                    </div>
+                          </div>
                       </div>
                       <!--Footer Widget End-->
                    </div>
-                  <div class="col-lg-4 col-md-6 col-sm-6">
+                   <div class="col-lg-3 col-md-6 col-sm-6">
                      <!--Footer Widget Start-->
                      <div class="footer-widget">
-                        <h4>So'nggi Yangiliklar</h4>
+                        <p style="font-size:20px; color:#9ccc62">So'nggi Yangiliklar</p>
                         <ul class="lastest-products">
                            {% block footer%}
                            {% endblock footer%}
@@ -178,21 +178,44 @@
                      </div>
                      <!--Footer Widget End-->
                   </div>
-                  <div class="col-lg-4 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div style="width: 100%; height: 100%;" class="footer-widget footer-qism">
-                            <iframe style="margin-top: 30px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.6486414220926!2d69.2254687!3d41.2947508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b62ad6c0735%3A0x2260c74fb009b861!2z0I7Qt9Cx0LXQutC40YHRgtC-0L0g0KDQtdGB0L_Rg9Cx0LvQuNC60LDRgdC4INCt0LrQvtC70L7Qs9C40Y8g0LLQsCDQsNGC0YDQvtGEINC80YPSs9C40YLQvdC4INC80YPSs9C-0YTQsNC30LAg0pvQuNC70LjRiCDQtNCw0LLQu9Cw0YIg0pvRntC80LjRgtCw0YHQuA!5e0!3m2!1sen!2s!4v1682565479652!5m2!1sen!2s"
-                            title="This is a unique title"   width="100%" height="60%" allowFullScreen loading="lazy"></iframe>
-                            <div class="joy">
-                                <a href="Instagram.com/uzecoit"> <i class="fa-brands fa-instagram ikonkachalar"></i></a>
-                                <a href="Facebook.com/uzecoit"> <i class="fa-brands fa-facebook ikonkachalar"></i></a>
-                                <a href="https://t.me/Ecoilm"><i class="fa-brands fa-telegram ikonkachalar"></i></a>
-                                <a href=" YouTube.com/@uzecoit"><i class="fa-brands fa-youtube ikonkachalar"></i></a>
-                            </div>
-                        </div>
+                   <div class="col-lg-3 col-md-6 col-sm-6">
+                      <div class="footer-widget">
+                          <p style="font-size:20px; color:#9ccc62"> Malumot jo'natish </p>
+                          <form method="post" >
+                              <div class="form-floating form-group mb-3">
+                                  <input type="text" class="form-control form-control-sm" id="floatingInput" placeholder="John Denail">
+                                  <label for="floatingInput">Ism Familiyasi</label>
+                              </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control form-control-sm" id="floatingPassword" placeholder="Email">
+                                  <label for="floatingPassword">Emailni kiriting</label>
+                                </div>
+                               <div class="form-floating mb-3">
+                                    <textarea class="form-control form-control-sm" id="sendmessage" placeholder="Leave a comment here"></textarea>
+                                    <label for="sendmessage">Teks kiriting</label>
+                                </div>
+                                <div class="form-floating">
+                                    <button type="button" class="btn btn-success">Malumot yuborish </button>
+                                </div>
+                          </form>
+                      </div>
                 </div>
-            </div>
-         </div>
+                   <div class="col-lg-3 col-md-6 col-sm-6">
+                        <p style="font-size:20px; color:#9ccc62">Bizni Ijtimoiy tarmoqlarda kuzatib boring</p>
+                            <div class="ikonkalar">
+                                <a href="Instagram.com/uzecoit"> <i class="fa-brands fa-instagram "></i></a>
+                                <a href="Facebook.com/uzecoit"> <i class="fa-brands fa-facebook "></i></a>
+                                <a href="https://t.me/Ecoilm"><i class="fa-brands fa-telegram "></i></a>
+                                <a href=" YouTube.com/@uzecoit"><i class="fa-brands fa-youtube "></i></a>
+                            </div>
+                            <div style="width: 80%; height: 90%;" class="footer-widget footer-qism">
+                            <iframe style="margin-top: 30px;"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2997.6486414220926!2d69.2254687!3d41.2947508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b62ad6c0735%3A0x2260c74fb009b861!2z0I7Qt9Cx0LXQutC40YHRgtC-0L0g0KDQtdGB0L_Rg9Cx0LvQuNC60LDRgdC4INCt0LrQvtC70L7Qs9C40Y8g0LLQsCDQsNGC0YDQvtGEINC80YPSs9C40YLQvdC4INC80YPSs9C-0YTQsNC30LAg0pvQuNC70LjRiCDQtNCw0LLQu9Cw0YIg0pvRntC80LjRgtCw0YHQuA!5e0!3m2!1sen!2s!4v1682565479652!5m2!1sen!2s"
+                                title="This is a unique title"   width="100%" height="60%" allowFullScreen loading="lazy"></iframe>
+                            </div>
+                </div>
+                </div>
+<!--         </div>-->
          <!-- ifraganus logo start-->
          <div class="footer-copyr wf100">
             <div class="container">
@@ -208,6 +231,7 @@
          <!-- ifraganus logo start-->
       </footer>
       <!--Footer End-->
+
       <script type="text/javascript" src="{% static '/bootstrap/js/jquery-3.3.1.min.js' %}" ></script>
       <script type="text/javascript" src="{% static '/bootstrap/js/jquery-migrate-1.4.1.min.js'%}" ></script>
       <script type="text/javascript" src="{% static '/bootstrap/js/popper.min.js' %}" ></script>
@@ -217,20 +241,6 @@
       <script type="text/javascript" src="{% static '/slick/slick.min.js'%}" ></script>
       <script type="text/javascript" src="{% static '/bootstrap/js/isotope.min.js' %}" ></script>
       <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-      <script>
-
-   $(document).ready(function(){
-
-    $('.owl-carousel').owlCarousel({
-          items: 4, // no. of items
-          nav: true, // if you want navigation arrows make it true otherwise false
-          dots: true // if you want pagination dots make it true otherwise false
-        });
-          AOS.init({
-           duration: 3000
-            });
-      });
-      </script>
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
    </body>
 </html>
