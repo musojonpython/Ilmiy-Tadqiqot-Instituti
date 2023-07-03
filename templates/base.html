@@ -91,30 +91,40 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home-page'%}">Institut</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'aboutPages'%}">Batafsil</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{% url 'home-page'%}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="{% url 'home-page' %}">Institut</a></li>
+                             <li><a href="{% url 'aboutPages' %}">Biz haqimizda</a></li>
+                             <li><a href="{% url 'aboutPages' %}#vazifafunksiyalar">Vazifa funksiyalar</a></li>
+                         </ul>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="{% url 'news-pages' %}">Yangiliklar</a>
+                     </li>
+                       <li class="nav-item">
+                        <a class="nav-link" href="#loyihalarPage">Ilmiy kengash</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#loyihalarPage">Loyihalar</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'project-detail' %}">Faoliyat</a>
+                        <a class="nav-link" href="{% url 'qizil-kitob' %}">Qizil kitob</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#boglanish">Bog'lanish</a>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'science-pages' %}">Ilmiy Jurnal</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#ilmiyJurnal">Ilmiy Jurnal</a>
+                       <li class="nav-item">
+                        <a class="nav-link" href="{% url 'project-detail' %}">Onlayn Kutubxona</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'openBudget-pages'%]">Ochiq Ma'lumotlar</a>
-                     </li>
+<!--                     <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#boglanish">Bog'lanish</a>-->
+<!--                     </li>-->
+
+<!--                     <li class="nav-item">-->
+<!--                        <a class="nav-link" href="{% url 'openBudget-pages'%]">Ochiq Ma'lumotlar</a>-->
+<!--                     </li>-->
+<!--                      -->
                   </ul>
                </div>
             </nav>

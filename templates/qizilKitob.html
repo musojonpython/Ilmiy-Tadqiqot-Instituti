@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<section class="wf100 p80 inner-header">
+   <div class="container">
+      <h1>O'zbekiston Respublikasi qizil kitobi</h1>
+      <ul>
+         <li><a href="{% url 'home-page'%}">Institut</a></li>
+         <li><a href="{% url 'aboutPages' %}">Qizil Kitob</a></li>
+      </ul>
+   </div>
+</section>
+<!--Inner Header End-->
+     <section class="qizil-kitob container">
+      <div class="row" >
+         <div class="col-lg-6">
+            <div class="blog-small-post">
+               <div class="post-thumb"> <a href="#">
+                  <i class="fas fa-link"></i></a>
+                  <img src="{% static 'images/osimlik-qizil-kitob.png' %}" alt="">
+               </div>
+                  <div class="post-txt">
+                     <span class="pdate"> </span>
+                     <h5><a href="#">Qizil Kitob 1-Qism(O'simliklar Haqida).</a></h5>
+                     <p> Oʻsimliklar olamining kamyob, yoʻqolib ketish xavfida boʻlgan 163 turi haqida ilk bor mukammal maʼlumotlar 1984-yil bosmadan chiqqan Qizil kitobda keltirilgan.</p>
+                     <a target="_blank" href="{% static 'books/Qizil-kitob-O'simliklar.pdf' % }" class="rm">Yuklash Uchun Bosish</a>
+                  </div>
+               </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="blog-small-post">
+               <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a>
+                  <img src="{% static 'images/hayvon-qizil-kitob.png' %}" alt="">
+               </div>
+               <div class="post-txt">
+                  <span class="pdate"> </span>
+                  <h5><a href="#">Qizil Kitob 2-Qism(Hayvonlar Haqida).</a></h5>
+                  <p> Qizil kitobning soʻnggi nashriga sut emizuvchilarning — 24<br>
+                     qushlarning — 51, sudralib yuruvchilarning — 16, baliqlarning — 18, halqali chuvalchanglarning — 3, mollyuskalarning — 15, boʻgʻimoyoqlilarning — 62 turi va kenja turi kiritilgan.</p>
+                  <a target="_blank" href="{% static 'books/Qizil-kitob-Hayvonlar.pdf' %}" class="rm">Yuklash Uchun Bosish</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      </section>
+      </div>
+   {% endblock content %}
+   {% block footer %}
+   {% for footerNew in footerNews %}
+       <li>
+          <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+          <strong><a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a></strong>
+          <span class="pdate"><i>Chop etildi:</i> {{footerNew.created_at|date}}</span>
+       </li>
+   {% endfor %}
+   {% endblock footer%}

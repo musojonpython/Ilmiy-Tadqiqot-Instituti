@@ -23,6 +23,11 @@ class PostImageInline(admin.TabularInline):
 class PostImageAdmin(admin.ModelAdmin):
     inlines = [PostImageInline, ]
 
+@admin.register(models.BannerImages)
+class BannerImagesAdmin(admin.ModelAdmin):
+    list_display = ["title", "image"]
+
+
 class ProjectNameUrlsInline(admin.TabularInline):
     model = models.ProjectsList
     readonly_fields = ('id', 'projectName')

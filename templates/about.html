@@ -165,10 +165,7 @@
             </div>
          </div>
       </section>
-
-            <!--Our Success Story End-->
-      <!--Why you Need to Choose Ecova Start-->
-      <div class="choose-ecova wf100 p80">
+      <div id="vazifafunksiyalar" class="choose-ecova wf100 p80">
          <div class="container">
             <div class="row">
                <div class="col-lg-12">
@@ -297,7 +294,6 @@
          </div>
       </div>
       <!--Why you Need to Choose Ecova End-->
-        <!--Partner Logos Section End-->
       </section>
 
       <section class="wf100 p80 team">
@@ -362,12 +358,12 @@
                   
       <section>
 
-         <div style="display: block; margin-left: 20%;" class="tuzilma">
-               <h4>Atrof muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot institutining</h4>
-               <h2 style="margin-left: 20%"> TUZILMASI</h2>
-               <img style=" width: 1000px; height: 1000px;" src="{% static 'images/tuzilma2.jpg' %}" alt="Tuzilma rasmi">
-         </div>
-         <div style="margin-left: 20%; font-weight: 600; color: #222;" class="izoh-tuzilma">
+      <div style="display: block; margin-left: 20%;" class="tuzilma">
+         <h4>Atrof muhit va tabiatni muhofaza qilish texnologiyalari ilmiy-tadqiqot institutining</h4>
+         <h2 style="margin-left: 20%"> TUZILMASI</h2>
+         <img style=" width: 1000px; height: 1000px;" src="{% static 'images/tuzilma2.jpg' %}" alt="Tuzilma rasmi">
+      </div>
+      <div style="margin-left: 20%; font-weight: 600; color: #222;" class="izoh-tuzilma">
             <h4 >IZOH</h4>
             <p>
                - Xodimlarning umumiy cheklangan soni - 35 ta ( ilmiy yordamchi va yordamchi hodimlardan tashqari)  <br>
@@ -379,40 +375,13 @@
          </div>
    </section>
 
-     <section class="qizil-kitob">
-      <div class="row" >
-         <div class="col-lg-6">
-            <div class="blog-small-post">
-               <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{% static 'images/osimlik-qizil-kitob.png' %}" alt=""> </div>
-                  <div class="post-txt">
-                     <span class="pdate"> </span>
-                     <h5><a href="#">Qizil Kitob 1-Qism(O'simliklar Haqida).</a></h5>
-                     <p> Oʻsimliklar olamining kamyob, yoʻqolib ketish xavfida boʻlgan 163 turi haqida ilk bor mukammal maʼlumotlar 1984-yil bosmadan chiqqan Qizil kitobda keltirilgan.</p>
-                     <a href="./books/Qizil kitob - O'simliklar.pdf" class="rm">Yuklash Uchun Bosish</a>
-                  </div>
-               </div>
-         </div>
-         <div class="col-lg-6">
-            <div class="blog-small-post">
-               <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{% static 'images/hayvon-qizil-kitob.png' %}" alt=""> </div>
-               <div class="post-txt">
-                  <span class="pdate"> </span>
-                  <h5><a href="#">Qizil Kitob 2-Qism(Hayvonlar Haqida).</a></h5>
-                  <p>  Qizil kitobning soʻnggi nashriga sut emizuvchilarning — 24, qushlarning — 51, sudralib yuruvchilarning — 16, baliqlarning — 18, halqali chuvalchanglarning — 3, mollyuskalarning — 15, boʻgʻimoyoqlilarning — 62 turi va kenja turi kiritilgan.</p>
-                  <a href="./books/Qizil kitob Hayvonlar.pdf" class="rm">Yuklash Uchun Bosish</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-      </div>
    {% endblock content %}
    {% block footer %}
    {% for footerNew in footerNews %}
-       <li>
-          <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
-          <strong><a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a></strong>
-          <span class="pdate"><i>Chop etildi:</i> {{footerNew.created_at|date}}</span>
-       </li>
+    <li>
+       <img class="yangiliklar" src="{{ footerNew.image.url }}" alt="">
+       <strong><a href="{% url 'news-detail' footerNew.id %}">{{footerNew.title|truncatewords:7}}</a></strong>
+       <span class="pdate"><i>Chop etildi:</i> {{footerNew.created_at|date}}</span>
+    </li>
    {% endfor %}
    {% endblock footer%}

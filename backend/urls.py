@@ -19,7 +19,8 @@ from .views import (
     projectDetail8,
     projectDetail9,
     projectDetail10,
-    projectDetail
+    projectDetail,
+    redBook
 
 )
 from django.urls import path
@@ -31,6 +32,7 @@ urlpatterns = [
     path('activity/', activityPages, name="activity-pages"),
     path('connect/', connectPages, name="connect-pages"),
     path('science-journal/', scienceJournal, name="science-pages"),
+    path('red-book/', redBook, name="qizil-kitob"),
     path('open-budget/', openBudgetPages, name="openBudget-pages"),
     path('news-detail/<int:id>', newsDetail, name="news-detail"),
     path('fist-projects/', firstProjectsList, name="first-projects"),
