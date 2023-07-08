@@ -13,24 +13,52 @@ def homePages(request):
     banners = BannerImages.objects.all().order_by("-created_at")
     pollution = requests.get("https://api.airvisual.com/v2/nearest_city?key=62d478cb-427d-4308-9042-70b480b96594").json()['data']
 
-    # date = pollution['current']['pollution']['ts'][:10]
-    # time = pollution['current']['pollution']['ts'][11:16]
     now = datetime.now().strftime("%d/%m/%Y  %H:%M:%S")
-    aqius = pollution['current']['pollution']['aqius']
+    aqius = int(pollution['current']['pollution']['aqius'])
     mainus = pollution['current']['pollution']['mainus']
     tp = pollution['current']['weather']['tp']
     hu = pollution['current']['weather']['hu']
-    wd = pollution['current']['weather']['wd']
+    wd = pollution['current']['weather']['ws']
     ic = pollution['current']['weather']['ic']
     city = pollution['state']
+    ic = 'images/weather-icons/' + ic + ".png"
+    status = 'Hazardous'
+    statusColor = "#a06a7b"
 
+    if aqius <= 50 and aqius >= 0:
+        statusEn = 'Good'
+        statusUz = 'Yaxshi'
+        statusColor = '#9cd84e'
+        statusImg = 'images/weather-icons/ic-face-green.svg'
+    if aqius >= 51 and aqius <= 100:
+        statusEn = 'Moderate'
+        statusUz = "O'rtacha"
+        statusColor = '#facf39'
+        statusImg = 'images/weather-icons/ic-face-yellow.svg'
+    if aqius >= 101 and aqius <= 150:
+        statusUz = "Nozik guruhlar uchun nosog'lom"
+        statusEn = 'Unhealthy for Sensitive Groups'
+        statusColor = '#f99049'
+        statusImg = 'images/weather-icons/ic-face-orange.svg'
+    if aqius >= 151 and aqius <= 200:
+        statusEn = "Unhealthy"
+        statusUz = "Nosog'lom"
+        statusColor = '#f65e5f'
+        statusImg = 'images/weather-icons/ic-red-orange.svg'
+    if aqius >= 201 and aqius <= 300:
+        statusEn = "Very Unhealthy"
+        statusUz = "Juda Nosog'lom"
+        statusColor = '#a070b6'
+        statusImg = 'images/weather-icons/ic-red-orange.svg'
 
     context = {
+        "statusUz": statusUz,
+        "statusImg": statusImg,
+        'statusColor': statusColor,
         "lastJournal": lastJournal,
         "lastNewses": lastNews,
         "banners": banners,
         "now": now,
-        # "time": time,
         "aqius": aqius,
         "mainus": mainus,
         "tp": tp,

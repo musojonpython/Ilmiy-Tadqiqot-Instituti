@@ -19,23 +19,23 @@
         <span style="margin-left: 10%; font-size: large; color:white">{{city}}</span>
         <div class="row">
           <table class="table">
-            <tr style="border: solid 1px;">
-              <td style="background-color: #fdd64b;">
-                  <img style="width: 100%; height: 100%;" src="{% static 'images/ic-face-yellow.svg' %}" alt="">
+            <tr style="border: solid 1px; backgroud-color:{{statusColor}}">
+              <td style="background-color: {{statusColor}};">
+                  <img style="width: 100%; height: 100%;" src="{% static statusImg %}" alt="">
               </td>
-              <td style="background-color: #ffdf58; text-align: center;">
+              <td style="background-color: {{statusColor}}; text-align: center;">
                   <h1>{{aqius}}</h1>
                   <h6>US AQI</h6>
               </td>
-              <td style="background-color: #ffdf58; text-align: center;">
-                  <h4 style="margin-top: 8px;">Oʻrtacha</h4>
+              <td style="background-color: {{statusColor}}; text-align: center;">
+                  <h6 style="margin-top: 8px;">{{statusUz}}</h6>
                   <p style="background-color: white; margin-top: 20px;">PM 2.5|23.4mg/m</p>
               </td>
             </tr>
             <tr style="border: solid 1px;">
               <td style="border: solid 1px;">
                 <div>
-                  <p style="text-align: center; font-size: 20px; color:white"> <img style="width:30px" src="{% static 'images/weather-icons/01d.png'%}"> {{tp}}</p>
+                  <p style="text-align: center; font-size: 20px; color:white"> <img style="width:30px" src="{% static ic %}"> {{tp}}</p>
                 </div>
               </td>
               <td style="border: solid 1px;">
@@ -45,7 +45,7 @@
               </td>
               <td style="border: solid 1px;">
                 <div>
-                  <p style="text-align: center; font-size: 20px; color:white"> <i class="fa-solid fa-location-arrow"></i> {{wd}} km/h</p>
+                  <p style="text-align: center; font-size: 20px; color:white"> <i class="fa-solid fa-location-arrow"></i> {{wd}} m/s</p>
                 </div>
               </td>
             </tr>
