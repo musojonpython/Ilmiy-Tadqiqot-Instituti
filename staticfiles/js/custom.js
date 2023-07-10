@@ -1,4 +1,4 @@
-alert("hello guys")
+
 $(document).ready(function(){
 
   $('.owl-carousel').owlCarousel({

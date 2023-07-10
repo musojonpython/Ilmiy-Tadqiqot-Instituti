@@ -14,13 +14,14 @@ def homePages(request):
     pollution = requests.get("https://api.airvisual.com/v2/nearest_city?key=62d478cb-427d-4308-9042-70b480b96594").json()['data']
 
     now = datetime.now().strftime("%d/%m/%Y  %H:%M:%S")
+    city = pollution['city']
     aqius = int(pollution['current']['pollution']['aqius'])
     mainus = pollution['current']['pollution']['mainus']
     tp = pollution['current']['weather']['tp']
     hu = pollution['current']['weather']['hu']
     wd = pollution['current']['weather']['ws']
     ic = pollution['current']['weather']['ic']
-    city = pollution['state']
+
     ic = 'images/weather-icons/' + ic + ".png"
     status = 'Hazardous'
     statusColor = "#a06a7b"
