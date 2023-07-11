@@ -10,7 +10,6 @@
         position: relative;
         .transition(.1s ease-in-out left);
    }
-
 </style>
 
 <div class="wrapper home2">
@@ -33,19 +32,19 @@
               </td>
             </tr>
             <tr style="border: solid 1px;">
-              <td style="border: solid 1px;">
+              <td style="border: solid 1px; background-color: {{statusColor}}">
                 <div>
-                  <p style="text-align: center; font-size: 20px; color:white"> <img style="width:30px" src="{% static ic %}"> {{tp}}</p>
+                  <p style="text-align: center; font-size: 20px; color:black"> <img style="width:30px" src="{% static ic %}"> {{tp}}</p>
                 </div>
               </td>
-              <td style="border: solid 1px;">
+              <td style="border: solid 1px; background-color: {{statusColor}}">
                 <div>
-                  <p style="text-align: center; font-size: 20px; color:white"> <i class="fa-solid fa-droplet"></i> {{hu}}%</p>
+                  <p style="text-align: center; font-size: 20px; color:black"> <i class="fa-solid fa-droplet"></i> {{hu}}%</p>
                 </div>
               </td>
-              <td style="border: solid 1px;">
+              <td style="border: solid 1px; background-color: {{statusColor}}">
                 <div>
-                  <p style="text-align: center; font-size: 20px; color:white"> <i class="fa-solid fa-location-arrow"></i> {{wd}} m/s</p>
+                  <p style="text-align: center; font-size: 20px; color:black"> <i class="fa-solid fa-location-arrow"></i> {{wd}} m/s</p>
                 </div>
               </td>
             </tr>
@@ -67,28 +66,45 @@
             {% if forloop.counter <= 1%}
              <div class="carousel-item active">
                  <div class="slider-caption h2slider">
-                    <p style="margin-left:15%">
-                        {{banner.title}}
-                    </p>
+                     <div class="container" style="color:black">
+                         <strong><span>Climate</span> change is real. It </strong>
+                     <p>is <strong>happening</strong> right now</p>
+                     </div>
                  </div>
                <img  src="{{banner.image.url}}" class="d-block w-100" alt="...">
              </div>
             {% endif %}
             {% endfor %}
             {% for banner in banners %}
-            {% if forloop.counter > 1%}
+            {% if forloop.counter == 2 %}
              <div class="carousel-item">
                  <div class="slider-caption h2slider">
-                    <p style="margin-left:15%">
-                        {{banner.title}}
-                    </p>
+                    <div class="container" style="color:black">
+                        <strong><span>All life depends upon the soil...</span> There can be no life </strong>
+                         <h1>without soil</h1>
+                         <p>and <strong>no soil without life;</strong> they have evolved together</p>
+                    </div>
+
+                 </div>
+               <img  src="{{banner.image.url}}" class="d-block w-100" alt="...">
+             </div>
+            {% endif %}
+            {% endfor %}
+            {% for banner in banners %}
+            {% if forloop.counter == 3%}
+             <div class="carousel-item">
+                 <div class="slider-caption h2slider">
+                    <div class="container" style="color:black">
+                        <strong><span>It’s never been more important for</span> us to understand the effects </strong>
+                         <h1>biodiversity loss…</h1>
+                         <p>only if we do that, <strong>will we have any hope of averting disaster </strong> </p>
+                    </div>
                  </div>
                <img  src="{{banner.image.url}}" class="d-block w-100" alt="...">
              </div>
             {% endif %}
             {% endfor %}
         </div>
-
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -101,51 +117,9 @@
       </div>
    </section>
 
-<!--    <section class="services-area wf100">-->
-<!--      <div class="container">-->
-<!--         <ul style="width:100%">-->
-<!--             <li style="width:25%">-->
-<!--                <div class="sinfo" >-->
-<!--                   <img src="{% static 'images/qoriqxona.png' %}" alt="">-->
-<!--                   <h6>Muhofaza Etiladigan tabiiy hududlar</h6>-->
-<!--                   <p>Qo'riqxona, Bog'lar</p>-->
-<!--                </div>-->
-<!--             </li>-->
-<!--             <li style="width:25%">-->
-<!--                <div class="sinfo">-->
-<!--                   <img src="{% static 'images/boglar.png' %}" alt="">-->
-<!--                   <a href="{% url 'first-projects' %}"> <h6>Bioxilmaxillikni saqlash</h6></a>-->
-<!--                </div>-->
-<!--                 <a  href="{% url 'first-projects'%}">Ko'proq</a>-->
-<!--             </li>-->
-<!--             <li style="width:25%">-->
-<!--                <div class="sinfo">-->
-<!--                   <img src="{% static 'images/tabiatyodgorligi.png' %}" alt="">-->
-<!--                   <h6>CHiqindilarni qayta ishlash va utilizatsiya </h6>-->
-<!--                   <p>Suv resurslarini saqlang</p>-->
-<!--                </div>-->
-<!--             </li>-->
-<!--             <li style="width:25%">-->
-<!--                <div class="sinfo">-->
-<!--                   <img src="{% static 'images/biosferarezervati.png' %}" alt="">-->
-<!--                   <h6>Yashil o'sish va ilqim o'zgarishi</h6>-->
-<!--                   <p>Tabbiy energiyani saqlang</p>-->
-<!--                </div>-->
-<!--             </li>-->
-<!--             <li style="width:25%">-->
-<!--                  <div class="sinfo">-->
-<!--                     <img src="{% static 'images/jayronpitomnigi.png' %}" alt="">-->
-<!--                     <h6>Atmosfera havosini muhofaza qilish </h6>-->
-<!--                     <p>O'simliklarni hayot uchun tirik qiling</p>-->
-<!--                  </div>-->
-<!--               </li>-->
-<!--         </ul>-->
-<!--      </div>-->
-<!--    </section>-->
-
     <section class="services-area wf100 mt-0.4">
       <div class="container">
-          <h3 style="color:white">Ekologiya, Atrof-muhit muxofazasi va iqlim o'zgarishi yo'nalishida olib borilayotgan ilmiy tadqiqotlar </h3>
+          <h3 style="color:white; text-align:center">Ekologiya, Atrof-muhit muxofazasi va iqlim o'zgarishi yo'nalishida olib borilayotgan ilmiy tadqiqotlar </h3>
          <ul style="width:100%">
              <li style="width:25%">
                 <div class="sinfo" >
@@ -471,9 +445,9 @@
                         </div>
                      </div>
                   </div>
-         </div>
-      </div>
-   </div>
+             </div>
+          </div>
+       </div>
 
 <!--   <div class="our-success-story wf100">-->
 <!--              <div class="container">-->
