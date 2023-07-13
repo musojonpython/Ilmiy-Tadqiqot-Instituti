@@ -6018,6 +6018,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 .slick-slide.slick-current strong {
 	color: #66bb6a;
 }
+
 .timeline .slick-slide h3 {
 	margin-bottom: 19px;
 }
@@ -6058,6 +6059,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 	color: #666;
 	line-height: 24px;
 }
+
 .eco-history .col-4 {
 	padding: 0 3px;
 }

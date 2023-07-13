@@ -1,5 +1,4 @@
 $(document).ready(function(){
-alert("hello guys")
   $('.owl-carousel').owlCarousel({
           items: 4, // no. of items
           nav: true, // if you want navigation arrows make it true otherwise false

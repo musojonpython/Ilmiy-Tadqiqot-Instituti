@@ -3,7 +3,7 @@
 import os
 import sys
 
-
+from Institute.wsgi import application
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Institute.settings')

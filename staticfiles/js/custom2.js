@@ -1,4 +1,4 @@
-alert("Men ishlayapman")
+
 
 function projectHeaderCarousel(){
     alert("Yangi funksiya bajarildi")
